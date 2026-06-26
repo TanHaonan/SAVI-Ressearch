@@ -1,0 +1,66 @@
+{
+  "summary": "Multi-slot consistency carrier. Per-slot emission = answer-position option distribution read from a frozen Qwen3-4B + small LoRA (rank 16). Edge = pairwise yes/no consistency potential from one of four sources. Factor graph decoded three ways (greedy / marginal / viterbi) and scored by joint exact-match against the exactly-known joint MAP.",
+  "carrier": {
+    "slots_T": [3, 4],
+    "options_per_slot_k": [3, 4],
+    "cross_slot_relation": ["same", "different"],
+    "planted_conflict_per_item": "one local-vs-global conflict (per-slot greedy is globally inconsistent on one slot)",
+    "joint_map": "exact, closed-form",
+    "n_items_total": 960,
+    "n_held_out": 227,
+    "de_risk_subset": {
+      "note": "The decode numbers below were measured on a de-risk subset: 1 seed, cells T=3 k=3 C=2, 25 held-out items, 2-4 epochs. Not the full (T,k,C) x 3-seed grid.",
+      "n_held_out_de_risk": 25
+    }
+  },
+  "pipeline": {
+    "unit_tests": 24,
+    "L0_static": "pass",
+    "L1_runtime": "pass",
+    "training_loss_start": 0.43,
+    "training_loss_end": 0.04,
+    "adapter_reload_delta_joint_em": 0.0
+  },
+  "decode_by_edge_source_decoupled_emission": {
+    "description": "decoupled emission (calibrated soft target, keeps correct option alive). joint exact-match.",
+    "oracle":  {"greedy": 0.00, "marginal": 0.88, "viterbi": 0.92},
+    "self_qwen3_4b":   {"greedy": 0.00, "marginal": 0.04, "viterbi": 0.04},
+    "cheap_tinyllama_1p1b": {"greedy": 0.00, "marginal": 0.00, "viterbi": 0.00},
+    "shuffle_random_hard": {"greedy": 0.00, "marginal": 0.28, "viterbi": 0.28}
+  },
+  "decode_by_emission_oracle_edges": {
+    "description": "oracle edges (true constraint). joint exact-match, marginal/viterbi.",
+    "decoupled": {"greedy": 0.00, "marginal_viterbi": 0.88},
+    "base_untrained": {"greedy": 0.12, "marginal_viterbi": 0.44},
+    "coupled_onehot": {"greedy": 0.20, "marginal_viterbi": 0.24, "confound": "coupled was trained one-hot toward gold, but gold on the bent slot is not determinable from the per-slot local prompt; this low number mixes collapse with an unlearnable target. The clean control is one-hot toward argmax(local_unary), not gold; not yet re-run."}
+  },
+  "viterbi_vs_marginal": {
+    "decoupled_oracle": {"marginal": 0.88, "viterbi": 0.92, "delta": 0.04},
+    "reading": "Viterbi adds about +0.04 over marginal; the gain over greedy comes from using the constraint at all (globality), not from the single-best-path form."
+  },
+  "edge_judgment_auc": {
+    "description": "Can the model rank truly-consistent option pairs above inconsistent ones, via logp(yes)-logp(no)? AUC on the same per-pair consistency query.",
+    "tinyllama_1p1b": 0.475,
+    "qwen3_4b": 0.669,
+    "wall": "1B-8B and several wordings all top out around 0.67; not a ladder.",
+    "decode_after_synthesis": "Composing these ~2/3-accurate per-pair judgments into a full-item constraint decodes to only 0.04-0.08 joint exact-match (one mis-signed cell flips the joint)."
+  },
+  "elicitation_sweep_auc": {
+    "description": "elicitation method (M0 current query / M1 symbolic reframe / M2 few-shot M1) x decorrelated model. consistent-vs-inconsistent ranking AUC, 16 items, 288 pairs each.",
+    "TinyLlama-1.1B": {"M0": 0.50, "M1": 0.54, "M2": 0.65},
+    "Llama-3.2-3B-Instruct": {"M0": 0.47, "M1": 0.65, "M2": 0.34},
+    "Llama-3.1-8B-Instruct": {"M0": 0.65, "M1": 0.67, "M2": 0.67},
+    "Qwen3-4B": {"M0": 0.67, "M1": 0.66, "M2": 0.68},
+    "decode_confirm": {
+      "Qwen3-4B_M2": {"greedy": 0.00, "source_marginal": 0.04, "source_viterbi": 0.08, "oracle_marginal": 0.88, "oracle_viterbi": 0.92},
+      "Llama-3.1-8B_M2": {"greedy": 0.00, "source_marginal": 0.08, "source_viterbi": 0.08, "oracle_marginal": 0.88, "oracle_viterbi": 0.92}
+    }
+  },
+  "source_files": {
+    "note": "Regularized from the internal run outputs.",
+    "run_base": "outputs/run_base_s0.json",
+    "run_coupled": "outputs/run_coupled_s0.json",
+    "run_decoupled": "outputs/run_decoupled_s0.json",
+    "elicitation_sweep": "outputs/elicit_probe.json"
+  }
+}

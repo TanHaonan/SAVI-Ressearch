@@ -1,0 +1,578 @@
+[
+  {
+    "id": "club_ambqa0",
+    "word": "club",
+    "scene": "We were talking about the club earlier today.",
+    "question": "Could you swing this club at something to hurt it?",
+    "gloss_a": "a heavy stick used as a weapon",
+    "gloss_b": "an organization people join and pay dues to",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "club_ambqa1",
+    "word": "club",
+    "scene": "She mentioned the club in passing during the meeting.",
+    "question": "Could you swing this club at something to hurt it?",
+    "gloss_a": "a heavy stick used as a weapon",
+    "gloss_b": "an organization people join and pay dues to",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "club_ambqa2",
+    "word": "club",
+    "scene": "The club came up again in our conversation yesterday.",
+    "question": "Could you swing this club at something to hurt it?",
+    "gloss_a": "a heavy stick used as a weapon",
+    "gloss_b": "an organization people join and pay dues to",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "club_ambqa3",
+    "word": "club",
+    "scene": "He left a short note that just said: the club.",
+    "question": "Could you swing this club at something to hurt it?",
+    "gloss_a": "a heavy stick used as a weapon",
+    "gloss_b": "an organization people join and pay dues to",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "racket_ambqa0",
+    "word": "racket",
+    "scene": "We were talking about the racket earlier today.",
+    "question": "Would reporting this racket likely lead to an arrest for fraud?",
+    "gloss_a": "loud unpleasant noise",
+    "gloss_b": "a dishonest scheme for making money",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "racket_ambqa1",
+    "word": "racket",
+    "scene": "She mentioned the racket in passing during the meeting.",
+    "question": "Would reporting this racket likely lead to an arrest for fraud?",
+    "gloss_a": "loud unpleasant noise",
+    "gloss_b": "a dishonest scheme for making money",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "racket_ambqa2",
+    "word": "racket",
+    "scene": "The racket came up again in our conversation yesterday.",
+    "question": "Would reporting this racket likely lead to an arrest for fraud?",
+    "gloss_a": "loud unpleasant noise",
+    "gloss_b": "a dishonest scheme for making money",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "racket_ambqa3",
+    "word": "racket",
+    "scene": "He left a short note that just said: the racket.",
+    "question": "Would reporting this racket likely lead to an arrest for fraud?",
+    "gloss_a": "loud unpleasant noise",
+    "gloss_b": "a dishonest scheme for making money",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pole_ambqa0",
+    "word": "pole",
+    "scene": "We were talking about the pole earlier today.",
+    "question": "Could one person pick this pole up and carry it?",
+    "gloss_a": "either of the two ends of the Earth's axis (extreme cold region)",
+    "gloss_b": "a long slender rounded piece of wood or metal",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pole_ambqa1",
+    "word": "pole",
+    "scene": "She mentioned the pole in passing during the meeting.",
+    "question": "Could one person pick this pole up and carry it?",
+    "gloss_a": "either of the two ends of the Earth's axis (extreme cold region)",
+    "gloss_b": "a long slender rounded piece of wood or metal",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pole_ambqa2",
+    "word": "pole",
+    "scene": "The pole came up again in our conversation yesterday.",
+    "question": "Could one person pick this pole up and carry it?",
+    "gloss_a": "either of the two ends of the Earth's axis (extreme cold region)",
+    "gloss_b": "a long slender rounded piece of wood or metal",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pole_ambqa3",
+    "word": "pole",
+    "scene": "He left a short note that just said: the pole.",
+    "question": "Could one person pick this pole up and carry it?",
+    "gloss_a": "either of the two ends of the Earth's axis (extreme cold region)",
+    "gloss_b": "a long slender rounded piece of wood or metal",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "saw_ambqa0",
+    "word": "saw",
+    "scene": "We were talking about the saw earlier today.",
+    "question": "Does this saw have teeth that bite into material?",
+    "gloss_a": "a tool with a toothed blade for cutting",
+    "gloss_b": "a short well-known saying or proverb",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "saw_ambqa1",
+    "word": "saw",
+    "scene": "She mentioned the saw in passing during the meeting.",
+    "question": "Does this saw have teeth that bite into material?",
+    "gloss_a": "a tool with a toothed blade for cutting",
+    "gloss_b": "a short well-known saying or proverb",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "saw_ambqa2",
+    "word": "saw",
+    "scene": "The saw came up again in our conversation yesterday.",
+    "question": "Does this saw have teeth that bite into material?",
+    "gloss_a": "a tool with a toothed blade for cutting",
+    "gloss_b": "a short well-known saying or proverb",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "saw_ambqa3",
+    "word": "saw",
+    "scene": "He left a short note that just said: the saw.",
+    "question": "Does this saw have teeth that bite into material?",
+    "gloss_a": "a tool with a toothed blade for cutting",
+    "gloss_b": "a short well-known saying or proverb",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "deck_ambqa0",
+    "word": "deck",
+    "scene": "We were talking about the deck earlier today.",
+    "question": "Could you sail across the ocean while standing on this deck?",
+    "gloss_a": "a pack of playing cards",
+    "gloss_b": "the floor or platform on a ship",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "deck_ambqa1",
+    "word": "deck",
+    "scene": "She mentioned the deck in passing during the meeting.",
+    "question": "Could you sail across the ocean while standing on this deck?",
+    "gloss_a": "a pack of playing cards",
+    "gloss_b": "the floor or platform on a ship",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "deck_ambqa2",
+    "word": "deck",
+    "scene": "The deck came up again in our conversation yesterday.",
+    "question": "Could you sail across the ocean while standing on this deck?",
+    "gloss_a": "a pack of playing cards",
+    "gloss_b": "the floor or platform on a ship",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "deck_ambqa3",
+    "word": "deck",
+    "scene": "He left a short note that just said: the deck.",
+    "question": "Could you sail across the ocean while standing on this deck?",
+    "gloss_a": "a pack of playing cards",
+    "gloss_b": "the floor or platform on a ship",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "fender_ambqa0",
+    "word": "fender",
+    "scene": "We were talking about the fender earlier today.",
+    "question": "Does this fender sit indoors near a hearth?",
+    "gloss_a": "the panel framing the wheel of a car",
+    "gloss_b": "a guard placed in front of a fireplace to catch falling coals",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "fender_ambqa1",
+    "word": "fender",
+    "scene": "She mentioned the fender in passing during the meeting.",
+    "question": "Does this fender sit indoors near a hearth?",
+    "gloss_a": "the panel framing the wheel of a car",
+    "gloss_b": "a guard placed in front of a fireplace to catch falling coals",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "fender_ambqa2",
+    "word": "fender",
+    "scene": "The fender came up again in our conversation yesterday.",
+    "question": "Does this fender sit indoors near a hearth?",
+    "gloss_a": "the panel framing the wheel of a car",
+    "gloss_b": "a guard placed in front of a fireplace to catch falling coals",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "fender_ambqa3",
+    "word": "fender",
+    "scene": "He left a short note that just said: the fender.",
+    "question": "Does this fender sit indoors near a hearth?",
+    "gloss_a": "the panel framing the wheel of a car",
+    "gloss_b": "a guard placed in front of a fireplace to catch falling coals",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "draft_ambqa0",
+    "word": "draft",
+    "scene": "We were talking about the draft earlier today.",
+    "question": "Is this draft about choosing athletes for teams?",
+    "gloss_a": "a current of cool air in an enclosed space",
+    "gloss_b": "the selection of players by sports teams",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "draft_ambqa1",
+    "word": "draft",
+    "scene": "She mentioned the draft in passing during the meeting.",
+    "question": "Is this draft about choosing athletes for teams?",
+    "gloss_a": "a current of cool air in an enclosed space",
+    "gloss_b": "the selection of players by sports teams",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "draft_ambqa2",
+    "word": "draft",
+    "scene": "The draft came up again in our conversation yesterday.",
+    "question": "Is this draft about choosing athletes for teams?",
+    "gloss_a": "a current of cool air in an enclosed space",
+    "gloss_b": "the selection of players by sports teams",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "draft_ambqa3",
+    "word": "draft",
+    "scene": "He left a short note that just said: the draft.",
+    "question": "Is this draft about choosing athletes for teams?",
+    "gloss_a": "a current of cool air in an enclosed space",
+    "gloss_b": "the selection of players by sports teams",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "spar_ambqa0",
+    "word": "spar",
+    "scene": "We were talking about the spar earlier today.",
+    "question": "Does this spar involve two people throwing punches?",
+    "gloss_a": "a thick pole supporting a ship's sail or rigging",
+    "gloss_b": "to practice fighting, as in boxing",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "spar_ambqa1",
+    "word": "spar",
+    "scene": "She mentioned the spar in passing during the meeting.",
+    "question": "Does this spar involve two people throwing punches?",
+    "gloss_a": "a thick pole supporting a ship's sail or rigging",
+    "gloss_b": "to practice fighting, as in boxing",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "spar_ambqa2",
+    "word": "spar",
+    "scene": "The spar came up again in our conversation yesterday.",
+    "question": "Does this spar involve two people throwing punches?",
+    "gloss_a": "a thick pole supporting a ship's sail or rigging",
+    "gloss_b": "to practice fighting, as in boxing",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "spar_ambqa3",
+    "word": "spar",
+    "scene": "He left a short note that just said: the spar.",
+    "question": "Does this spar involve two people throwing punches?",
+    "gloss_a": "a thick pole supporting a ship's sail or rigging",
+    "gloss_b": "to practice fighting, as in boxing",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "scale_ambqa0",
+    "word": "scale",
+    "scene": "We were talking about the scale earlier today.",
+    "question": "Would you use this scale to find out how heavy something is?",
+    "gloss_a": "one of the small plates covering a fish or reptile",
+    "gloss_b": "a device for weighing things",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "scale_ambqa1",
+    "word": "scale",
+    "scene": "She mentioned the scale in passing during the meeting.",
+    "question": "Would you use this scale to find out how heavy something is?",
+    "gloss_a": "one of the small plates covering a fish or reptile",
+    "gloss_b": "a device for weighing things",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "scale_ambqa2",
+    "word": "scale",
+    "scene": "The scale came up again in our conversation yesterday.",
+    "question": "Would you use this scale to find out how heavy something is?",
+    "gloss_a": "one of the small plates covering a fish or reptile",
+    "gloss_b": "a device for weighing things",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "scale_ambqa3",
+    "word": "scale",
+    "scene": "He left a short note that just said: the scale.",
+    "question": "Would you use this scale to find out how heavy something is?",
+    "gloss_a": "one of the small plates covering a fish or reptile",
+    "gloss_b": "a device for weighing things",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "jam_ambqa0",
+    "word": "jam",
+    "scene": "We were talking about the jam earlier today.",
+    "question": "Could you spread this jam on a slice of bread?",
+    "gloss_a": "a situation where things are stuck and cannot move",
+    "gloss_b": "a sweet fruit spread eaten on bread",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "jam_ambqa1",
+    "word": "jam",
+    "scene": "She mentioned the jam in passing during the meeting.",
+    "question": "Could you spread this jam on a slice of bread?",
+    "gloss_a": "a situation where things are stuck and cannot move",
+    "gloss_b": "a sweet fruit spread eaten on bread",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "jam_ambqa2",
+    "word": "jam",
+    "scene": "The jam came up again in our conversation yesterday.",
+    "question": "Could you spread this jam on a slice of bread?",
+    "gloss_a": "a situation where things are stuck and cannot move",
+    "gloss_b": "a sweet fruit spread eaten on bread",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "jam_ambqa3",
+    "word": "jam",
+    "scene": "He left a short note that just said: the jam.",
+    "question": "Could you spread this jam on a slice of bread?",
+    "gloss_a": "a situation where things are stuck and cannot move",
+    "gloss_b": "a sweet fruit spread eaten on bread",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "chip_ambqa0",
+    "word": "chip",
+    "scene": "We were talking about the chip earlier today.",
+    "question": "Does this chip run software and do calculations?",
+    "gloss_a": "a small token used to represent money when gambling",
+    "gloss_b": "a small semiconductor part that runs a computer",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "chip_ambqa1",
+    "word": "chip",
+    "scene": "She mentioned the chip in passing during the meeting.",
+    "question": "Does this chip run software and do calculations?",
+    "gloss_a": "a small token used to represent money when gambling",
+    "gloss_b": "a small semiconductor part that runs a computer",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "chip_ambqa2",
+    "word": "chip",
+    "scene": "The chip came up again in our conversation yesterday.",
+    "question": "Does this chip run software and do calculations?",
+    "gloss_a": "a small token used to represent money when gambling",
+    "gloss_b": "a small semiconductor part that runs a computer",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "chip_ambqa3",
+    "word": "chip",
+    "scene": "He left a short note that just said: the chip.",
+    "question": "Does this chip run software and do calculations?",
+    "gloss_a": "a small token used to represent money when gambling",
+    "gloss_b": "a small semiconductor part that runs a computer",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "gauge_ambqa0",
+    "word": "gauge",
+    "scene": "We were talking about the gauge earlier today.",
+    "question": "Is this gauge a dial you read to check a value?",
+    "gloss_a": "the distance between the two rails of a railway track",
+    "gloss_b": "a dial instrument that displays a measurement",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "gauge_ambqa1",
+    "word": "gauge",
+    "scene": "She mentioned the gauge in passing during the meeting.",
+    "question": "Is this gauge a dial you read to check a value?",
+    "gloss_a": "the distance between the two rails of a railway track",
+    "gloss_b": "a dial instrument that displays a measurement",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "gauge_ambqa2",
+    "word": "gauge",
+    "scene": "The gauge came up again in our conversation yesterday.",
+    "question": "Is this gauge a dial you read to check a value?",
+    "gloss_a": "the distance between the two rails of a railway track",
+    "gloss_b": "a dial instrument that displays a measurement",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "gauge_ambqa3",
+    "word": "gauge",
+    "scene": "He left a short note that just said: the gauge.",
+    "question": "Is this gauge a dial you read to check a value?",
+    "gloss_a": "the distance between the two rails of a railway track",
+    "gloss_b": "a dial instrument that displays a measurement",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pitch_ambqa0",
+    "word": "pitch",
+    "scene": "We were talking about the pitch earlier today.",
+    "question": "Is this pitch about a quality of a musical tone?",
+    "gloss_a": "a thick black sticky substance from tar, used for waterproofing",
+    "gloss_b": "how high or low a musical sound is",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pitch_ambqa1",
+    "word": "pitch",
+    "scene": "She mentioned the pitch in passing during the meeting.",
+    "question": "Is this pitch about a quality of a musical tone?",
+    "gloss_a": "a thick black sticky substance from tar, used for waterproofing",
+    "gloss_b": "how high or low a musical sound is",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pitch_ambqa2",
+    "word": "pitch",
+    "scene": "The pitch came up again in our conversation yesterday.",
+    "question": "Is this pitch about a quality of a musical tone?",
+    "gloss_a": "a thick black sticky substance from tar, used for waterproofing",
+    "gloss_b": "how high or low a musical sound is",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "pitch_ambqa3",
+    "word": "pitch",
+    "scene": "He left a short note that just said: the pitch.",
+    "question": "Is this pitch about a quality of a musical tone?",
+    "gloss_a": "a thick black sticky substance from tar, used for waterproofing",
+    "gloss_b": "how high or low a musical sound is",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "hood_ambqa0",
+    "word": "hood",
+    "scene": "We were talking about the hood earlier today.",
+    "question": "Can you pull this hood up over your head when it rains?",
+    "gloss_a": "the hinged metal cover over a car's engine",
+    "gloss_b": "a soft covering for the head attached to a coat",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "hood_ambqa1",
+    "word": "hood",
+    "scene": "She mentioned the hood in passing during the meeting.",
+    "question": "Can you pull this hood up over your head when it rains?",
+    "gloss_a": "the hinged metal cover over a car's engine",
+    "gloss_b": "a soft covering for the head attached to a coat",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "hood_ambqa2",
+    "word": "hood",
+    "scene": "The hood came up again in our conversation yesterday.",
+    "question": "Can you pull this hood up over your head when it rains?",
+    "gloss_a": "the hinged metal cover over a car's engine",
+    "gloss_b": "a soft covering for the head attached to a coat",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "hood_ambqa3",
+    "word": "hood",
+    "scene": "He left a short note that just said: the hood.",
+    "question": "Can you pull this hood up over your head when it rains?",
+    "gloss_a": "the hinged metal cover over a car's engine",
+    "gloss_b": "a soft covering for the head attached to a coat",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "trunk_ambqa0",
+    "word": "trunk",
+    "scene": "We were talking about the trunk earlier today.",
+    "question": "Could you lock your luggage inside this trunk for a road trip?",
+    "gloss_a": "the long flexible nose of an elephant",
+    "gloss_b": "the rear storage compartment of a car",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "trunk_ambqa1",
+    "word": "trunk",
+    "scene": "She mentioned the trunk in passing during the meeting.",
+    "question": "Could you lock your luggage inside this trunk for a road trip?",
+    "gloss_a": "the long flexible nose of an elephant",
+    "gloss_b": "the rear storage compartment of a car",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "trunk_ambqa2",
+    "word": "trunk",
+    "scene": "The trunk came up again in our conversation yesterday.",
+    "question": "Could you lock your luggage inside this trunk for a road trip?",
+    "gloss_a": "the long flexible nose of an elephant",
+    "gloss_b": "the rear storage compartment of a car",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "trunk_ambqa3",
+    "word": "trunk",
+    "scene": "He left a short note that just said: the trunk.",
+    "question": "Could you lock your luggage inside this trunk for a road trip?",
+    "gloss_a": "the long flexible nose of an elephant",
+    "gloss_b": "the rear storage compartment of a car",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "stroke_ambqa0",
+    "word": "stroke",
+    "scene": "We were talking about the stroke earlier today.",
+    "question": "Is this stroke a way of propelling yourself through water?",
+    "gloss_a": "a sudden loss of brain function from interrupted blood flow",
+    "gloss_b": "a single movement of the arms in swimming",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "stroke_ambqa1",
+    "word": "stroke",
+    "scene": "She mentioned the stroke in passing during the meeting.",
+    "question": "Is this stroke a way of propelling yourself through water?",
+    "gloss_a": "a sudden loss of brain function from interrupted blood flow",
+    "gloss_b": "a single movement of the arms in swimming",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "stroke_ambqa2",
+    "word": "stroke",
+    "scene": "The stroke came up again in our conversation yesterday.",
+    "question": "Is this stroke a way of propelling yourself through water?",
+    "gloss_a": "a sudden loss of brain function from interrupted blood flow",
+    "gloss_b": "a single movement of the arms in swimming",
+    "target_pyes": 0.5
+  },
+  {
+    "id": "stroke_ambqa3",
+    "word": "stroke",
+    "scene": "He left a short note that just said: the stroke.",
+    "question": "Is this stroke a way of propelling yourself through water?",
+    "gloss_a": "a sudden loss of brain function from interrupted blood flow",
+    "gloss_b": "a single movement of the arms in swimming",
+    "target_pyes": 0.5
+  }
+]

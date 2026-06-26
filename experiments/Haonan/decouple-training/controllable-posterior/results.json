@@ -1,0 +1,45 @@
+{
+  "carrier": {
+    "description": "prior-free elimination puzzles; k content-free options, j survivors; exact Bayes posterior is uniform over the j survivors",
+    "k_values": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "n_items_total": 1120,
+    "n_held_out": 259
+  },
+  "model": {
+    "base": "Qwen/Qwen3-4B (frozen)",
+    "adapter": "LoRA rank 16",
+    "objective": "KL(known target || softmax(option logits)) + bounded-margin rank term + fluency KL anchor"
+  },
+  "metric": "total variation (TV) between native option distribution and the exact posterior; lower = closer to truth",
+  "n_seeds": 3,
+  "capacity_oracle_decoupled_tv_by_survivors": {
+    "1": 0.0001,
+    "2": 0.0174,
+    "3": 0.0206,
+    "4": 0.0174,
+    "5": 0.0164
+  },
+  "collapse_oracle_coupled_tv_by_survivors": {
+    "2": 0.5,
+    "3": 0.6667,
+    "4": 0.75,
+    "5": 0.8
+  },
+  "within_survivor_nonuniformity": {
+    "decoupled": 0.0182,
+    "coupled": 0.63,
+    "note": "mean over ambiguous (j>=2) cells; 0 = perfectly uniform over survivors"
+  },
+  "shuffle_control_mean_tv": 0.3718,
+  "inference_gap_self_minus_oracle_tv_by_survivors": {
+    "2": 0.021,
+    "3": 0.016,
+    "4": 0.019,
+    "5": 0.01
+  }
+}

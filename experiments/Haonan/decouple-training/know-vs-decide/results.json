@@ -1,0 +1,36 @@
+{
+  "model": "frozen Qwen3-4B (eval-only; small linear readout head on mid-layer hidden states; no backbone or LoRA training)",
+  "carrier": "bank/ATM-style context sense disambiguation; 16 base polysemous words; context fixes the sense but local word co-occurrence pulls toward the wrong sense",
+  "eval_slice": {
+    "name": "gen_test (leave-words-out, ~1/3 of words held out)",
+    "n": 146,
+    "balance": "cued sense a/b = 73/73, gold yes/no = 73/73",
+    "face_validity_hand_items": 18
+  },
+  "P3_late_commit_vs_native_greedy": {
+    "native_greedy_answer_acc": 0.527,
+    "readout_late_commit_answer_acc": 0.952,
+    "readout_sense_acc": 0.952,
+    "gap": 0.42,
+    "gap_ci": [0.34, 0.51],
+    "ci_method": "paired bootstrap, 1000 resamples"
+  },
+  "P1_temperature_sweep": {
+    "answer_acc": 0.911,
+    "answer_acc_range_over_T": 0.0,
+    "ece_at_T0.5": 0.027,
+    "ece_at_T8": 0.352,
+    "ece_range": 0.325,
+    "T_grid": [0.25, 0.5, 1.0, 2.0, 4.0, 8.0],
+    "note": "accuracy/AUC invariant to monotone temperature is by construction; the reportable content is the ECE span and the existence of a low-ECE operating point (T=0.5, ECE 0.027)"
+  },
+  "P1_ranking_vs_cross_entropy_discrimination": {
+    "ranking_only_acc": 0.914,
+    "ranking_only_auc": 0.965,
+    "cross_entropy_acc": 0.949,
+    "cross_entropy_auc": 0.980,
+    "acc_diff": 0.035,
+    "note": "approximately equal; small residual remains, so discrimination is 'mostly' independent of sharpness pressure, not exactly"
+  },
+  "source_note": "Numbers regularized from internal outputs/p1_p3.json; rounded to match the public issue claims for this experiment (0.527 -> 0.952, gap +0.42 CI[0.34,0.51]; temperature acc ~0.911, ECE 0.027 -> 0.352; ranking 0.914 vs CE 0.949)."
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "word": "club",
+    "gloss_a": "a heavy stick used as a weapon",
+    "gloss_b": "an organization people join and pay dues to",
+    "scene_a": "The cave painting showed an early hunter raising his club to finish off a wounded mammoth. A row of modern golf bags leaned against the museum wall behind the display.",
+    "question_a": "Could you swing this club at something to hurt it?",
+    "gold_a": "yes",
+    "scene_b": "After paying her annual membership and getting the welcome packet, Maya finally belonged to the rooftop chess club. A bouncer guarded the entrance to the loud venue downstairs.",
+    "question_b": "Could you swing this club at something to hurt it?",
+    "gold_b": "no"
+  },
+  {
+    "word": "racket",
+    "gloss_a": "loud unpleasant noise",
+    "gloss_b": "a dishonest scheme for making money",
+    "scene_a": "The neighbors upstairs kept dragging furniture at 3 a.m., and the racket finally drove Tom to bang on the ceiling with a broom. A tennis bag sat forgotten by his front door.",
+    "question_a": "Would reporting this racket likely lead to an arrest for fraud?",
+    "gold_a": "no",
+    "scene_b": "Investigators uncovered the contractor's racket: he loosened bolts on cars he had just fixed so customers kept coming back to pay again. The garage stereo blasted music the whole time.",
+    "question_b": "Would reporting this racket likely lead to an arrest for fraud?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "pole",
+    "gloss_a": "either of the two ends of the Earth's axis (extreme cold region)",
+    "gloss_b": "a long slender rounded piece of wood or metal",
+    "scene_a": "The expedition team huddled in their tent as the wind chill dropped past minus fifty, still days of travel from the pole. A flagstaff stood frozen outside.",
+    "question_a": "Could one person pick this pole up and carry it?",
+    "gold_a": "no",
+    "scene_b": "The acrobat gripped the smooth pole, climbed hand over hand, and held herself out sideways at the top while the crowd gasped. A spinning globe of the planet sat in the lobby below.",
+    "question_b": "Could one person pick this pole up and carry it?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "saw",
+    "gloss_a": "a tool with a toothed blade for cutting",
+    "gloss_b": "a short well-known saying or proverb",
+    "scene_a": "Grandpa pulled the dusty saw off the workbench and worked it back and forth across the plank until the board fell in two. He liked to repeat his old motto about wasted daylight.",
+    "question_a": "Does this saw have teeth that bite into material?",
+    "gold_a": "yes",
+    "scene_b": "Whenever the kids griped about chores, Mom recited the same tired saw her own mother had drilled into her. A toolbox clattered shut in the garage nearby.",
+    "question_b": "Does this saw have teeth that bite into material?",
+    "gold_b": "no"
+  },
+  {
+    "word": "deck",
+    "gloss_a": "a pack of playing cards",
+    "gloss_b": "the floor or platform on a ship",
+    "scene_a": "She shuffled the deck, fanned it across the felt, and asked the volunteer to pick one without showing her. Out the porthole the gray sea heaved past the ship.",
+    "question_a": "Could you sail across the ocean while standing on this deck?",
+    "gold_a": "no",
+    "scene_b": "The sailors scrubbed the deck before dawn while the captain watched from the bridge. A card game from the night before had left chips scattered on a nearby table.",
+    "question_b": "Could you sail across the ocean while standing on this deck?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "fender",
+    "gloss_a": "the panel framing the wheel of a car",
+    "gloss_b": "a guard placed in front of a fireplace to catch falling coals",
+    "scene_a": "After the parking-lot scrape, Dana ran her hand over the dented fender arcing above the front tire. Her acoustic guitar leaned against the trunk.",
+    "question_a": "Does this fender sit indoors near a hearth?",
+    "gold_a": "no",
+    "scene_b": "The brass fender had darkened with soot over the winter, so Grandma polished it until it gleamed against the warm glow of the burning logs. A neighbor's hatchback idled outside.",
+    "question_b": "Does this fender sit indoors near a hearth?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "draft",
+    "gloss_a": "a current of cool air in an enclosed space",
+    "gloss_b": "the selection of players by sports teams",
+    "scene_a": "Even with the radiator on, Lena kept feeling the draft and finally stuffed a rolled towel under the door. A poster of her favorite quarterback hung above the bed.",
+    "question_a": "Is this draft about choosing athletes for teams?",
+    "gold_a": "no",
+    "scene_b": "Team executives stayed up all night ranking prospects, knowing the draft could decide the franchise's next decade. The conference-room window wouldn't latch, leaving everyone shivering at the table.",
+    "question_b": "Is this draft about choosing athletes for teams?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "spar",
+    "gloss_a": "a thick pole supporting a ship's sail or rigging",
+    "gloss_b": "to practice fighting, as in boxing",
+    "scene_a": "Lightning had split the spar that held the mainsail, and the crew lashed a replacement before the next squall hit. Two deckhands had been trading mock punches earlier to pass the time.",
+    "question_a": "Does this spar involve two people throwing punches?",
+    "gold_a": "no",
+    "scene_b": "Before the title bout, the champ would spar with a younger partner to sharpen his timing. A model schooner with tall masts decorated the gym's front desk.",
+    "question_b": "Does this spar involve two people throwing punches?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "scale",
+    "gloss_a": "one of the small plates covering a fish or reptile",
+    "gloss_b": "a device for weighing things",
+    "scene_a": "The chef ran his thumb against the grain of the trout's skin until one scale lifted, then scraped the rest off into the sink. A digital readout for measuring kilograms beeped on the counter.",
+    "question_a": "Would you use this scale to find out how heavy something is?",
+    "gold_a": "no",
+    "scene_b": "She stepped onto the scale, waited for the number to settle, and sighed at the readout after the holidays. A goldfish flicked its shimmering body in the bowl beside her.",
+    "question_b": "Would you use this scale to find out how heavy something is?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "jam",
+    "gloss_a": "a situation where things are stuck and cannot move",
+    "gloss_b": "a sweet fruit spread eaten on bread",
+    "scene_a": "Horns blared for half a mile as the highway turned into a parking lot, and the jam pinned every car bumper to bumper for twenty minutes. The kids in the back seat nibbled toast they'd brought from home.",
+    "question_a": "Could you spread this jam on a slice of bread?",
+    "gold_a": "no",
+    "scene_b": "She spooned the dark, sticky jam out of the jar and smeared it thick across her muffin at breakfast. Outside, brake lights stretched bumper to bumper for blocks.",
+    "question_b": "Could you spread this jam on a slice of bread?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "chip",
+    "gloss_a": "a small token used to represent money when gambling",
+    "gloss_b": "a small semiconductor part that runs a computer",
+    "scene_a": "He pushed his last round plastic chip into the center of the table and called the bet, sweat on his brow. A repair guy fiddled with a cracked motherboard at the next booth.",
+    "question_a": "Does this chip run software and do calculations?",
+    "gold_a": "no",
+    "scene_b": "The phone froze because the chip inside had overheated, so the technician swapped the fingernail-sized part under a magnifier. A high-stakes card game was playing on the TV behind him.",
+    "question_b": "Does this chip run software and do calculations?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "gauge",
+    "gloss_a": "the distance between the two rails of a railway track",
+    "gloss_b": "a dial instrument that displays a measurement",
+    "scene_a": "Engineers fought for years because the gauge in the mountains was too narrow for the broader trains from the plains, so every load had to be hauled off and reloaded by hand at the border. A row of pressure dials lined the locomotive cab.",
+    "question_a": "Is this gauge a dial you read to check a value?",
+    "gold_a": "no",
+    "scene_b": "The pilot tapped the glass when the gauge stuck, then read off the fuel level to the tower. A model railway with two different track widths ran along the office shelf.",
+    "question_b": "Is this gauge a dial you read to check a value?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "pitch",
+    "gloss_a": "a thick black sticky substance from tar, used for waterproofing",
+    "gloss_b": "how high or low a musical sound is",
+    "scene_a": "The boatbuilders heated the pitch in a kettle and brushed it into the seams of the hull so the sea couldn't seep through. A flute lay open in its case on a barrel nearby.",
+    "question_a": "Is this pitch about a quality of a musical tone?",
+    "gold_a": "no",
+    "scene_b": "The choir director winced when the soprano drifted, the pitch sliding flat on the long held note. Workers were tarring the roof of the church just outside.",
+    "question_b": "Is this pitch about a quality of a musical tone?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "hood",
+    "gloss_a": "the hinged metal cover over a car's engine",
+    "gloss_b": "a soft covering for the head attached to a coat",
+    "scene_a": "Steam hissed the moment he lifted the hood of the stalled sedan, and he jumped back from the heat. His raincoat lay crumpled on the passenger seat.",
+    "question_a": "Can you pull this hood up over your head when it rains?",
+    "gold_a": "no",
+    "scene_b": "The downpour started suddenly, so she yanked the hood up and cinched the drawstring tight against the wind. A mechanic across the street was bent over an open engine bay.",
+    "question_b": "Can you pull this hood up over your head when it rains?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "trunk",
+    "gloss_a": "the long flexible nose of an elephant",
+    "gloss_b": "the rear storage compartment of a car",
+    "scene_a": "At the watering hole the great gray animal dipped its trunk, drew in water, and sprayed its own back to cool off in the heat. A taxi idled at the gate behind the fence.",
+    "question_a": "Could you lock your luggage inside this trunk for a road trip?",
+    "gold_a": "no",
+    "scene_b": "She popped the trunk open in the parking lot and wedged the spare tire next to the groceries before slamming the lid. A documentary about wild herds played on a screen in the store window.",
+    "question_b": "Could you lock your luggage inside this trunk for a road trip?",
+    "gold_b": "yes"
+  },
+  {
+    "word": "stroke",
+    "gloss_a": "a sudden loss of brain function from interrupted blood flow",
+    "gloss_b": "a single movement of the arms in swimming",
+    "scene_a": "His words slurred and his face drooped on one side, so his wife dialed for an ambulance the instant she suspected a stroke and timed how long it lasted. A poster of Olympic swimmers hung in the clinic hallway.",
+    "question_a": "Is this stroke a way of propelling yourself through water?",
+    "gold_a": "no",
+    "scene_b": "The coach told her to lengthen each stroke and breathe every third one so she wouldn't tire before the final lap. A first-aid chart about warning signs of a medical emergency was taped to the locker-room wall.",
+    "question_b": "Is this stroke a way of propelling yourself through water?",
+    "gold_b": "yes"
+  }
+]

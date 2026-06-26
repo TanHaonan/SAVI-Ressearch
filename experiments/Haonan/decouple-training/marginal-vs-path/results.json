@@ -1,0 +1,31 @@
+{
+  "claim": "On a real LLM's per-step output, single-best-path decoding (Viterbi/max-product) does not independently beat per-position marginal decoding (sum-product) on accuracy; the per-step output is too sharp (top-1 approx 0.92), so the two decoders converge.",
+  "model": "Qwen2.5-3B",
+  "carrier": "chain-structured CRF/HMM multi-solution task (multi-variable, adjacent hard-exclusion constraints, deliberately multimodal posterior)",
+  "unary_source": "real LLM per-position read-out belief",
+  "metric": "whole-answer exact-match accuracy gap (MAP minus MPM); posterior modality (pmap, mass on MAP path); marginal infeasibility rate",
+  "real_llm": {
+    "per_step_top1_prob": 0.92,
+    "path_vs_marginal_accuracy_gap": "+0.005 to +0.010",
+    "path_vs_marginal_accuracy_gap_ci": "touches 0",
+    "pmap": "0.65 to 0.72",
+    "note": "two decoders converge; LLM per-step output is near-unimodal"
+  },
+  "exact_emission_control_same_instances": {
+    "path_vs_marginal_accuracy_gap": 0.085,
+    "pmap": 0.24,
+    "note": "with exact unary on the same instances the posterior is multimodal and the two decoders separate"
+  },
+  "random_synthetic_constructions": {
+    "path_vs_marginal_accuracy_gap_max": 0.05,
+    "marginal_infeasibility_rate": "0.28 to 0.38 (in the multimodal region)",
+    "path_infeasibility_rate": 0.0,
+    "note": "path's only clean advantage on random instances is staying globally feasible, not accuracy"
+  },
+  "adversarial_construction": {
+    "path_strictly_beats_marginal_on_accuracy": true,
+    "mechanism": "many individually-weak feasible solutions route through the same value at one position; their summed marginal outvotes the single best path, so per-position marginal flips while Viterbi keeps the best path",
+    "note": "worst-case constructed potentials only; real LLM output does not fall into this distribution"
+  },
+  "conditions": "Path decoding's independent accuracy advantage appears only when the posterior is genuinely multimodal and competing mass is shaped into a fan converging to one value at one position. Real LLM per-step output is too sharp to land there. Synthetic chain task with real-LLM read-out as unary; tested tasks have design caveats (local lexical cues, brittle whole-answer exact-match), direction holds but a cleaner multimodal natural-language task is still needed."
+}
