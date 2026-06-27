@@ -1,0 +1,5 @@
+outputs/samples_*.json
+outputs/full_*.out
+__pycache__/
+.pytest_cache/
+*.pyc

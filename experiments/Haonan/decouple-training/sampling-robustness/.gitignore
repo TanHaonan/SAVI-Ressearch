@@ -1,0 +1,11 @@
+# raw sample dumps + run logs are not committed; only the per-group result JSONs are.
+outputs/*.log
+outputs/samples_*.json
+outputs/raw_*.json
+__pycache__/
+core/__pycache__/
+tests/__pycache__/
+.pytest_cache/
+# keep: outputs/robustness_<group>.json , outputs/calibration_<group>.json
+!outputs/robustness_*.json
+!outputs/calibration_*.json

@@ -1,0 +1,9 @@
+outputs/*.log
+outputs/*.stdout
+outputs/*.out
+outputs/*.partial.jsonl
+nohup.out
+__pycache__/
+*.pyc
+.pytest_cache/
+# outputs/aliasing_<group>.json is the small committed result (kept).

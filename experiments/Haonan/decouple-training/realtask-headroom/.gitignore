@@ -1,0 +1,5 @@
+outputs/samples_*.json
+outputs/run_full.out
+*.log
+__pycache__/
+*.pyc
