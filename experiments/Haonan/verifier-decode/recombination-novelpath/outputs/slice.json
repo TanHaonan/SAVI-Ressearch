@@ -1,0 +1,65 @@
+{
+ "plan": "recombination-novelpath",
+ "config": {
+  "p": [
+   0.5
+  ],
+  "gs": "0,inf",
+  "depth": 24,
+  "values": [
+   "learned"
+  ],
+  "seeds": [
+   0,
+   1
+  ],
+  "n": 8,
+  "K": 8,
+  "N": 16,
+  "tau": 1.0,
+  "lam": 1.0,
+  "M": 128
+ },
+ "cells": [
+  {
+   "p": 0.5,
+   "g": 0,
+   "value": "learned",
+   "lam": 1.0,
+   "M": 128,
+   "inst": 16,
+   "dec_ok": 12,
+   "chain_ok": 5,
+   "only_dec": 7,
+   "novel": 12,
+   "stitch": 1,
+   "dec_and_sel": 5,
+   "dec_solve_rate": 0.75,
+   "chain_solve_rate": 0.3125,
+   "only_decode_rate": 0.4375,
+   "novel_rate_of_solved": 1.0,
+   "stitch_rate_of_solved": 0.08333333333333333,
+   "median_log10_inv_q": 11.450910113271899
+  },
+  {
+   "p": 0.5,
+   "g": "inf",
+   "value": "learned",
+   "lam": 1.0,
+   "M": 128,
+   "inst": 16,
+   "dec_ok": 8,
+   "chain_ok": 5,
+   "only_dec": 5,
+   "novel": 8,
+   "stitch": 1,
+   "dec_and_sel": 3,
+   "dec_solve_rate": 0.5,
+   "chain_solve_rate": 0.3125,
+   "only_decode_rate": 0.3125,
+   "novel_rate_of_solved": 1.0,
+   "stitch_rate_of_solved": 0.125,
+   "median_log10_inv_q": 11.450910113271899
+  }
+ ]
+}

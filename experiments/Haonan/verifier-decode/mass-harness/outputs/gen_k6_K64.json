@@ -1,0 +1,975 @@
+{
+ "plan": "mass-harness-countdown",
+ "config": {
+  "set": "generated",
+  "Kbig": 64,
+  "K": 8,
+  "N": 8,
+  "tau": 1.0,
+  "lams": "0.5,1",
+  "seed": 0,
+  "gen_n": 24,
+  "gen_k": 6
+ },
+ "summary": {
+  "all": {
+   "n": 24,
+   "exact": {
+    "solve_rate": 1.0,
+    "only_decode": 0.125,
+    "novel_of_solved": 1.0,
+    "stitch_of_solved": 0.0
+   },
+   "learned": {
+    "solve_rate": 0.5,
+    "only_decode": 0.041666666666666664,
+    "novel_of_solved": 1.0,
+    "stitch_of_solved": 0.0
+   },
+   "freq": {
+    "solve_rate": 0.25,
+    "only_decode": 0.0,
+    "novel_of_solved": 1.0,
+    "stitch_of_solved": 0.0
+   }
+  },
+  "sparse_subset": {
+   "n": 3,
+   "exact": {
+    "solve_rate": 1.0,
+    "only_decode": 1.0,
+    "novel_of_solved": 1.0,
+    "stitch_of_solved": 0.0
+   },
+   "learned": {
+    "solve_rate": 0.3333333333333333,
+    "only_decode": 0.3333333333333333,
+    "novel_of_solved": 1.0,
+    "stitch_of_solved": 0.0
+   },
+   "freq": {
+    "solve_rate": 0.0,
+    "only_decode": 0.0,
+    "novel_of_solved": null,
+    "stitch_of_solved": null
+   }
+  },
+  "n_total": 24,
+  "n_solvable": 24,
+  "n_sparse": 3
+ },
+ "records": [
+  {
+   "id": "gen-1-000",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 3,
+   "mass_hat": 0.046875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 2,
+     "tokens": 696
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    }
+   }
+  },
+  {
+   "id": "gen-1-001",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 456
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 720
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 720
+    }
+   }
+  },
+  {
+   "id": "gen-1-002",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 3,
+   "mass_hat": 0.046875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 748
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 744
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 746
+    }
+   }
+  },
+  {
+   "id": "gen-1-003",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 456
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    }
+   }
+  },
+  {
+   "id": "gen-1-004",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 2,
+   "mass_hat": 0.03125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 0,
+     "tokens": 360
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    }
+   }
+  },
+  {
+   "id": "gen-1-005",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 2,
+   "mass_hat": 0.03125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 696
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 720
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 720
+    }
+   }
+  },
+  {
+   "id": "gen-1-006",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 4,
+     "tokens": 672
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 768
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 4,
+     "tokens": 768
+    }
+   }
+  },
+  {
+   "id": "gen-1-007",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 792
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 792
+    }
+   }
+  },
+  {
+   "id": "gen-1-008",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 3,
+   "mass_hat": 0.046875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 720
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 792
+    }
+   }
+  },
+  {
+   "id": "gen-1-009",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": true,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 720
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 768
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": true,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 768
+    }
+   }
+  },
+  {
+   "id": "gen-1-010",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": true,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 600
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 768
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 768
+    }
+   }
+  },
+  {
+   "id": "gen-1-011",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 6,
+   "mass_hat": 0.09375,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 721
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 769
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 2,
+     "tokens": 769
+    }
+   }
+  },
+  {
+   "id": "gen-1-012",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 5,
+   "mass_hat": 0.078125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 768
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 768
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 768
+    }
+   }
+  },
+  {
+   "id": "gen-1-013",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 6,
+   "mass_hat": 0.09375,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 744
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    }
+   }
+  },
+  {
+   "id": "gen-1-014",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 576
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 768
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 768
+    }
+   }
+  },
+  {
+   "id": "gen-1-015",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 3,
+   "mass_hat": 0.046875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 768
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 792
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 792
+    }
+   }
+  },
+  {
+   "id": "gen-1-016",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 4,
+     "tokens": 216
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    }
+   }
+  },
+  {
+   "id": "gen-1-017",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 2,
+   "mass_hat": 0.03125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 624
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    }
+   }
+  },
+  {
+   "id": "gen-1-018",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 2,
+   "mass_hat": 0.03125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 768
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    }
+   }
+  },
+  {
+   "id": "gen-1-019",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 7,
+   "mass_hat": 0.109375,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 2,
+     "tokens": 720
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 2,
+     "tokens": 768
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 2,
+     "tokens": 768
+    }
+   }
+  },
+  {
+   "id": "gen-1-020",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": true,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 0,
+     "tokens": 504
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    }
+   }
+  },
+  {
+   "id": "gen-1-021",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 744
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 1,
+     "tokens": 768
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 768
+    }
+   }
+  },
+  {
+   "id": "gen-1-022",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 2,
+   "mass_hat": 0.03125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 506
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 746
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 744
+    }
+   }
+  },
+  {
+   "id": "gen-1-023",
+   "k": 6,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 3,
+   "mass_hat": 0.046875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 5,
+     "n_covered": 3,
+     "tokens": 552
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 792
+    }
+   }
+  }
+ ]
+}

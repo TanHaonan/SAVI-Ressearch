@@ -1,0 +1,110 @@
+{
+  "study": "recombination-mechanism-check",
+  "important_note": "SEMI-SYNTHETIC mechanism check, NOT the real-LM result. Competence p is defined by the exact backward oracle (domain.solvable); P_p is a synthetic stand-in for a model that proposes goal-reachable moves with probability p. No claim about any real model's end-to-end behavior. The decisive number remains gated on the emission line.",
+  "verdict": {
+    "band_found": false,
+    "success_condition": "a competence band with D1 (savi_support - best_of_k_isobudget) > 0, CI excluding 0, AND D_merge (savi_support - beam_no_merge) > 0, flanked by C1/C2 nulls",
+    "summary": "No band UNDER CANDIDATE PARITY. D1 is strongly NEGATIVE at every p<1.0 (CIs exclude 0) and exactly 0 only at p=1.0. D_merge is small but positive at p in {0.6,0.8,0.9}, peaking at p=0.9 (+0.075), but never large enough to matter and never co-occurring with D1>0.",
+    "superseded_by": "axis_correction_addendum — the headline negative is LARGELY A CANDIDATE-PARITY ARTIFACT (candidate parity prices one full multi-step rollout the same as one single decoder step). On the honest moves/exec-parity axis the gap collapses ~6x and FLIPS POSITIVE (savi_freq beats compute-matched selection by +0.375 at K=8, depth=4). The original study's three choices (candidate parity + support-only headline arm + depth-3 substrate) each disfavor the trellis. SAVI premise NOT refuted."
+  },
+  "git_head": "d685b7b",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux 5.15.0-142-generic x86_64"
+  },
+  "countdown": {
+    "config": {"domain": "countdown", "set": "builtin_small", "p_grid": [0.3,0.5,0.6,0.7,0.8,0.9,1.0], "seeds": [1,2,3,4,5], "K": 8, "N": 16, "max_depth": 6, "tau": 0.7, "bootstrap_n": 10000},
+    "n_instances": 28,
+    "n_headroom": 16,
+    "n_control": 8,
+    "n_unsolvable": 4,
+    "n_paired": 80,
+    "per_p": {
+      "0.3": {"savi_support": 0.0125, "best_of_k_isobudget": 0.275, "beam_no_merge": 0.0, "savi_freq": 0.025,
+              "D1": {"delta": -0.2625, "lo": -0.3625, "hi": -0.1625}, "D_merge": {"delta": 0.0125, "lo": 0.0, "hi": 0.0375}, "D2": {"delta": 0.0125, "lo": 0.0, "hi": 0.0375},
+              "dp_only_wins_sum5": 1, "phi_attributed_wins_sum5": 1, "merge_ratio_mean": 3.167},
+      "0.5": {"savi_support": 0.0625, "best_of_k_isobudget": 0.7875, "beam_no_merge": 0.05, "savi_freq": 0.25,
+              "D1": {"delta": -0.725, "lo": -0.825, "hi": -0.625}, "D_merge": {"delta": 0.0125, "lo": 0.0, "hi": 0.0375}, "D2": {"delta": 0.1875, "lo": 0.0875, "hi": 0.2875},
+              "dp_only_wins_sum5": 0, "phi_attributed_wins_sum5": 1, "merge_ratio_mean": 3.158},
+      "0.6": {"savi_support": 0.15, "best_of_k_isobudget": 0.9125, "beam_no_merge": 0.1, "savi_freq": 0.475,
+              "D1": {"delta": -0.7625, "lo": -0.8625, "hi": -0.65}, "D_merge": {"delta": 0.05, "lo": 0.0125, "hi": 0.1}, "D2": {"delta": 0.325, "lo": 0.2, "hi": 0.45},
+              "dp_only_wins_sum5": 2, "phi_attributed_wins_sum5": 4, "merge_ratio_mean": 3.185},
+      "0.7": {"savi_support": 0.1125, "best_of_k_isobudget": 0.9875, "beam_no_merge": 0.1, "savi_freq": 0.7375,
+              "D1": {"delta": -0.875, "lo": -0.9375, "hi": -0.8}, "D_merge": {"delta": 0.0125, "lo": 0.0, "hi": 0.0375}, "D2": {"delta": 0.625, "lo": 0.5125, "hi": 0.7375},
+              "dp_only_wins_sum5": 0, "phi_attributed_wins_sum5": 1, "merge_ratio_mean": 3.170},
+      "0.8": {"savi_support": 0.225, "best_of_k_isobudget": 1.0, "beam_no_merge": 0.175, "savi_freq": 0.95,
+              "D1": {"delta": -0.775, "lo": -0.8625, "hi": -0.6875}, "D_merge": {"delta": 0.05, "lo": 0.0125, "hi": 0.1}, "D2": {"delta": 0.725, "lo": 0.625, "hi": 0.825},
+              "dp_only_wins_sum5": 0, "phi_attributed_wins_sum5": 4, "merge_ratio_mean": 3.244},
+      "0.9": {"savi_support": 0.3875, "best_of_k_isobudget": 1.0, "beam_no_merge": 0.3125, "savi_freq": 1.0,
+              "D1": {"delta": -0.6125, "lo": -0.7125, "hi": -0.5}, "D_merge": {"delta": 0.075, "lo": 0.025, "hi": 0.1375}, "D2": {"delta": 0.6125, "lo": 0.5, "hi": 0.7125},
+              "dp_only_wins_sum5": 0, "phi_attributed_wins_sum5": 6, "merge_ratio_mean": 3.413},
+      "1.0": {"savi_support": 1.0, "best_of_k_isobudget": 1.0, "beam_no_merge": 1.0, "savi_freq": 1.0,
+              "D1": {"delta": 0.0, "lo": 0.0, "hi": 0.0}, "D_merge": {"delta": 0.0, "lo": 0.0, "hi": 0.0}, "D2": {"delta": 0.0, "lo": 0.0, "hi": 0.0},
+              "dp_only_wins_sum5": 0, "phi_attributed_wins_sum5": 0, "merge_ratio_mean": 15.290}
+    },
+    "D1_peak": {"note": "no p with D1>0 except p=1.0 where D1=0; no positive band exists"},
+    "D_merge_peak": {"p": 0.9, "delta": 0.075, "lo": 0.025, "hi": 0.1375},
+    "D2_peak": {"p": 0.8, "delta": 0.725, "lo": 0.625, "hi": 0.825},
+    "controls": {
+      "C1_high_competence_p1.0": {"best_of_k": 1.0, "savi_support": 1.0, "dp_only_wins": 0.0, "status": "HOLD"},
+      "C2_low_competence_p0.3": {"best_of_k": 0.0, "savi_support": 0.0125, "dp_only_wins_per_cell": 0.2, "status": "HOLD"},
+      "C3_unsolvable": {"n_unsolvable": 4, "any_arm_solved_unsolvable": false, "status": "HOLD"},
+      "C4_verifier": {"savi_verifier_on_geq_savi_support_all_p": true, "examples": {"0.6": {"on": 0.8875, "off": 0.15}, "0.8": {"on": 1.0, "off": 0.225}, "0.9": {"on": 1.0, "off": 0.3875}}, "status": "HOLD"}
+    },
+    "iso_matched": true
+  },
+  "algebra_confirm": {
+    "config": {"domain": "algebra", "p": 0.6, "K": 6, "N": 8, "max_depth": 8, "seed": 1, "n_headroom": 8},
+    "ceiling": 1.0,
+    "cell": "NULL",
+    "savi_support": 0.0, "best_of_k_isobudget": 0.0, "beam_no_merge": 0.0,
+    "D1": {"delta": 0.0, "lo": 0.0, "hi": 0.0, "n": 8},
+    "D_merge": {"delta": 0.0, "lo": 0.0, "hi": 0.0, "n": 8},
+    "dp_only_wins": 0, "phi_attributed_wins": 0,
+    "merge_active_on_real_CAS": true, "merge_ratio": 8.0, "merge_before": 72, "merge_after": 9,
+    "iso_matched": true,
+    "determinism_rerun_identical": true,
+    "band_confirmed": false,
+    "note": "single point; tiny config solves nothing. Confirms Phi-merge is mechanically active on a real CAS Phi (merge_ratio 8.0) but produces no lift here."
+  },
+  "verify": {
+    "fairness": {"ok": true, "verdict": "FAIR; all four equal-compute checks pass (no injection: 0 chain-mode calls reached by any arm; iso candidate-matched exactly per instance across 980 triples; D1 reproduces by hand; verifier=False headline makes 0 solvable calls). Caveat: candidate-parity axis is not semantically symmetric (chain candidate = full rollout, savi candidate = one step), the structural reason D1<0. [CORRECTED post-hoc — see axis_correction_addendum and verify.fairness_caveat_CORRECTED: the claim that tokens/moves parity 'would not reverse the sign' is WRONG; on the exec axis the gap collapses ~6x and flips positive at K=8 depth=4.]"},
+    "merge_ablation": {"ok": true, "verdict": "beam_no_merge is a clean one-variable ablation of the Phi-merge; equals savi where no merge fires, diverges (strictly larger widths) where it does; phi_attributed_wins is the tight definition; beam_no_merge never compute-starved; merge_ratio>=3.09 wherever D_merge>0."},
+    "determinism": {"ok": true, "verdict": "PASS; fresh cache-free re-run of cell p=0.7 seed=3 reproduced all 8 arms' pass@1, dp/phi wins, merge_ratio to full float precision, plus per-instance maps and budgets bit-identically."},
+    "all_ok": true,
+    "corrections_to_numbers_required": false,
+    "fairness_caveat_CORRECTED": "verify.fairness flagged that candidate parity is not semantically symmetric (chain candidate = full rollout, savi candidate = one step) and then INCORRECTLY argued a tokens/moves axis 'would give the trellis less budget, not reverse the sign'. That reasoning is BACKWARDS: moves/exec parity gives the SELECTION baseline ~depth x FEWER complete attempts (a rollout costs ~depth move-applies). A direct probe (axis_correction_addendum) confirms the gap collapses ~6x and flips positive at K=8 depth=4. See addendum."
+  },
+  "axis_correction_addendum": {
+    "status": "POST-HOC CORRECTION (added after the workflow, by direct probe in the main session). The workflow's headline negative used CANDIDATE parity, which prices one full multi-step rollout the same as one single decoder step, handing the selection baseline ~depth x more complete attempts. That is the wrong iso-compute axis. On a MOVES/EXEC parity axis (equal total move-applies generated) the picture changes qualitatively.",
+    "probe_config": "Countdown, seeded solvable generated instances, p=0.7, N=6, 4 inst/depth x 2 seeds (small + directional; NOT CI-grade). iso_CAND = selection matched on candidate count (the workflow axis); iso_EXEC = selection matched on exec/move-applies (the honest axis). savi cand==exec by construction; iso draws ~depth x fewer rollouts under exec parity.",
+    "K4_N6": {
+      "depth3": {"savi_support": 0.125, "savi_freq": 0.375, "iso_CAND": 1.0, "iso_EXEC": 0.5, "freq_minus_isoEXEC": -0.125},
+      "depth4": {"savi_support": 0.0, "savi_freq": 0.125, "iso_CAND": 0.75, "iso_EXEC": 0.25, "freq_minus_isoEXEC": -0.125},
+      "depth5": {"savi_support": 0.0, "savi_freq": 0.125, "iso_CAND": 1.0, "iso_EXEC": 0.75, "freq_minus_isoEXEC": -0.625}
+    },
+    "K8_N6": {
+      "depth3": {"savi_support": 0.375, "savi_freq": 0.625, "iso_CAND": 1.0, "iso_EXEC": 0.75, "freq_minus_isoEXEC": -0.125},
+      "depth4": {"savi_support": 0.375, "savi_freq": 0.625, "iso_CAND": 0.75, "iso_EXEC": 0.25, "freq_minus_isoEXEC": 0.375},
+      "depth5": {"savi_support": 0.0, "savi_freq": 0.375, "iso_CAND": 1.0, "iso_EXEC": 0.75, "freq_minus_isoEXEC": -0.375}
+    },
+    "robust_readings": [
+      "Candidate->exec axis switch collapses selection's pass@1 in EVERY cell (e.g. depth3 K4 1.0->0.5; depth4 K8 0.75->0.25). The workflow's -0.6..-0.9 D1 was largely a candidate-parity artifact.",
+      "On the honest exec axis the trellis is COMPETITIVE, not crushed: freq_minus_isoEXEC is roughly +/-0.1..0.4 (noisy at 8 samples/cell) vs the workflow's -0.6..-0.9. Clear trellis win at K=8 depth=4 (+0.375); loss at depth=5 (-0.375).",
+      "savi_freq >> savi_support in every cell: the graded (frequency) edge carries the signal; support-only (all-zero edges) is the weakest arm and is NOT where to look.",
+      "Wider beam helps the trellis (K8 > K4 throughout)."
+    ],
+    "corrected_conclusion": "The SAVI premise is NOT refuted. The original study's three choices (candidate parity + support-only headline arm + depth-3 substrate) each disfavor the trellis and together produced a misleading null. The single most important design lesson for the real-LM decisive run: iso-compute MUST be tokens/moves, never candidate count (a chain rollout costs ~depth x a single step). Headline arm should be freq (or verifier-masked), not support.",
+    "caveats": [
+      "tiny samples (8/cell), directional not CI-grade; depth5 bounces negative (noise).",
+      "semi-synthetic oracle-defined competence; not a real LM.",
+      "freq>>support here partly because synthetic P_p makes frequency track quality directly; a real LM's frequency signal may be weaker (cf. the M1/M2 prereg D2 'freq ~= support' hypothesis)."
+    ],
+    "next": "A CI-grade exec/token-parity sweep with freq (and verifier-on) headline arms, wider beams (K in {8,16,32}), over a deeper substrate with a CHEAP solvability oracle (countdown.reachable is exponential in remaining numbers, capping depth ~5)."
+  },
+  "what_this_does_not_settle": [
+    "The real-LM end-to-end number (gated on the emission line).",
+    "A CI-grade exec/token-parity result (the addendum probe is directional, 8 samples/cell).",
+    "Whether the Phi-merge ever produces a decision-relevant (large) lift; observed D_merge <= 0.075 under candidate parity (the merge is real but small; the graded EDGE, not the merge, is the larger lever)."
+  ]
+}

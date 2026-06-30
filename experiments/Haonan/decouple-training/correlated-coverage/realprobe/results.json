@@ -1,0 +1,308 @@
+{
+  "n_instances": 8,
+  "K_grid": [
+    2,
+    4,
+    6,
+    8,
+    12,
+    16
+  ],
+  "axes": [
+    "gen_token",
+    "total_token"
+  ],
+  "oracle_coverage_mean": 1.0,
+  "curves": {
+    "iid_bok": {
+      "gen_token": [
+        {
+          "K": 2,
+          "coverage_mean": 0.5,
+          "token_mean": 74.5
+        },
+        {
+          "K": 4,
+          "coverage_mean": 0.75,
+          "token_mean": 149.0
+        },
+        {
+          "K": 6,
+          "coverage_mean": 1.0,
+          "token_mean": 223.5
+        },
+        {
+          "K": 8,
+          "coverage_mean": 1.0,
+          "token_mean": 298.0
+        },
+        {
+          "K": 12,
+          "coverage_mean": 1.0,
+          "token_mean": 447.0
+        },
+        {
+          "K": 16,
+          "coverage_mean": 1.0,
+          "token_mean": 595.125
+        }
+      ],
+      "total_token": [
+        {
+          "K": 2,
+          "coverage_mean": 0.5,
+          "token_mean": 1914.5
+        },
+        {
+          "K": 4,
+          "coverage_mean": 0.75,
+          "token_mean": 3829.0
+        },
+        {
+          "K": 6,
+          "coverage_mean": 1.0,
+          "token_mean": 5743.5
+        },
+        {
+          "K": 8,
+          "coverage_mean": 1.0,
+          "token_mean": 7658.0
+        },
+        {
+          "K": 12,
+          "coverage_mean": 1.0,
+          "token_mean": 11487.0
+        },
+        {
+          "K": 16,
+          "coverage_mean": 1.0,
+          "token_mean": 15285.125
+        }
+      ]
+    },
+    "conditioned": {
+      "gen_token": [
+        {
+          "K": 2,
+          "coverage_mean": 0.375,
+          "token_mean": 74.75
+        },
+        {
+          "K": 4,
+          "coverage_mean": 0.375,
+          "token_mean": 149.5
+        },
+        {
+          "K": 6,
+          "coverage_mean": 0.75,
+          "token_mean": 224.25
+        },
+        {
+          "K": 8,
+          "coverage_mean": 0.75,
+          "token_mean": 299.0
+        },
+        {
+          "K": 12,
+          "coverage_mean": 0.75,
+          "token_mean": 448.5
+        },
+        {
+          "K": 16,
+          "coverage_mean": 0.875,
+          "token_mean": 592.125
+        }
+      ],
+      "total_token": [
+        {
+          "K": 2,
+          "coverage_mean": 0.375,
+          "token_mean": 6857.0
+        },
+        {
+          "K": 4,
+          "coverage_mean": 0.375,
+          "token_mean": 13714.0
+        },
+        {
+          "K": 6,
+          "coverage_mean": 0.75,
+          "token_mean": 20571.0
+        },
+        {
+          "K": 8,
+          "coverage_mean": 0.75,
+          "token_mean": 27428.0
+        },
+        {
+          "K": 12,
+          "coverage_mean": 0.75,
+          "token_mean": 41142.0
+        },
+        {
+          "K": 16,
+          "coverage_mean": 0.875,
+          "token_mean": 54174.125
+        }
+      ]
+    },
+    "temp_matched_iid": {
+      "gen_token": [
+        {
+          "K": 2,
+          "coverage_mean": 0.25,
+          "token_mean": 55.375
+        },
+        {
+          "K": 4,
+          "coverage_mean": 0.25,
+          "token_mean": 114.375
+        },
+        {
+          "K": 6,
+          "coverage_mean": 0.625,
+          "token_mean": 173.875
+        },
+        {
+          "K": 8,
+          "coverage_mean": 0.625,
+          "token_mean": 236.875
+        },
+        {
+          "K": 12,
+          "coverage_mean": 0.75,
+          "token_mean": 379.5
+        },
+        {
+          "K": 16,
+          "coverage_mean": 0.75,
+          "token_mean": 522.375
+        }
+      ],
+      "total_token": [
+        {
+          "K": 2,
+          "coverage_mean": 0.25,
+          "token_mean": 1387.375
+        },
+        {
+          "K": 4,
+          "coverage_mean": 0.25,
+          "token_mean": 2864.5
+        },
+        {
+          "K": 6,
+          "coverage_mean": 0.625,
+          "token_mean": 4345.5
+        },
+        {
+          "K": 8,
+          "coverage_mean": 0.625,
+          "token_mean": 5915.0
+        },
+        {
+          "K": 12,
+          "coverage_mean": 0.75,
+          "token_mean": 9412.625
+        },
+        {
+          "K": 16,
+          "coverage_mean": 0.75,
+          "token_mean": 12873.25
+        }
+      ]
+    }
+  },
+  "H1_coverage_diff_at_Kref": {
+    "K_ref": 8,
+    "conditioned_minus_iid": [
+      -0.625,
+      -0.25,
+      0.0
+    ],
+    "temp_minus_iid": [
+      -0.75,
+      -0.375,
+      -0.125
+    ],
+    "conditioned_mean": 0.75,
+    "iid_mean": 1.0,
+    "temp_mean": 0.625
+  },
+  "H2_miss_slope": {
+    "gen_token": {
+      "iid_minus_cond_slope": [
+        -0.00015473711089045248,
+        0.0021007647450040153,
+        0.005031873250667259
+      ],
+      "cond_slope_median": -0.011921052970394691,
+      "iid_slope_median": -0.008256624740651105
+    },
+    "total_token": {
+      "iid_minus_cond_slope": [
+        -0.0005329468822737259,
+        -0.0002896867467804184,
+        -8.63741389804918e-05
+      ],
+      "cond_slope_median": -0.00012973604641872892,
+      "iid_slope_median": -0.0003287847418849346
+    }
+  },
+  "H4_temp_control": {
+    "temp_minus_iid_at_Kref": [
+      -0.75,
+      -0.375,
+      -0.125
+    ],
+    "cond_minus_temp_at_Kref": [
+      -0.25,
+      0.125,
+      0.5
+    ],
+    "mean_entropy_gap": 0.09639223681246184,
+    "mean_matched_tau": 1.7999999999999998
+  },
+  "holm_H1_H2_H4": {
+    "H2_gen": {
+      "p": 0.09669033096690331,
+      "adj_p": 0.2900709929007099,
+      "reject_0.05": false
+    },
+    "H4": {
+      "p": 0.38146185381461856,
+      "adj_p": 0.7629237076292371,
+      "reject_0.05": false
+    },
+    "H1": {
+      "p": 1.0,
+      "adj_p": 1.0,
+      "reject_0.05": false
+    }
+  },
+  "funnel": {
+    "iid_bok": {
+      "to_solvable": 192,
+      "to_dead": 335,
+      "n_steps": 527,
+      "to_solvable_frac": 0.36432637571157495
+    },
+    "conditioned": {
+      "to_solvable": 166,
+      "to_dead": 356,
+      "n_steps": 522,
+      "to_solvable_frac": 0.31800766283524906
+    },
+    "temp_matched_iid": {
+      "to_solvable": 132,
+      "to_dead": 275,
+      "n_steps": 407,
+      "to_solvable_frac": 0.32432432432432434
+    }
+  },
+  "anti_leak_one_forward_per_step": true,
+  "validity": {
+    "V1_all_in_band": true,
+    "V4_oracle_above_iid": true
+  }
+}

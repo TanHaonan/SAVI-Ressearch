@@ -1,0 +1,1910 @@
+{
+  "plan": "PLAN3-joint-lambda-decode",
+  "tier": "B",
+  "config": {
+    "ks": [
+      4,
+      5
+    ],
+    "n": 12,
+    "K": 8,
+    "N": 8,
+    "tau": 1.0,
+    "seed": 0,
+    "n_boot": 10000,
+    "inst_seed": 7,
+    "target_range": [
+      10,
+      100
+    ],
+    "abstain": null,
+    "adapter_decoupled": "contrib-savi/experiments/Haonan/decouple-training/countdown-decode/outputs/adapter_decoupled_s0",
+    "adapter_coupled": null,
+    "with_masked_bom": true,
+    "noise_eps": 0.0,
+    "noise_mode": "sym",
+    "competence_p": null
+  },
+  "profiles": {
+    "decoupled": {
+      "4": {
+        "k": 4,
+        "depth": 3,
+        "n_instances": 12,
+        "n_headroom": 10,
+        "headroom_ids": [
+          "gen-11-000",
+          "gen-11-003",
+          "gen-11-004",
+          "gen-11-006",
+          "gen-11-008",
+          "gen-11-009",
+          "gen-11-011",
+          "gen-11-012",
+          "gen-11-013",
+          "gen-11-020"
+        ],
+        "pass1_all": {
+          "greedy": 0.16666666666666666,
+          "self_consistency": 0.25,
+          "savi_l0_support": 0.5833333333333334,
+          "savi_l0_freq": 0.5,
+          "savi_l1_freq": 0.6666666666666666,
+          "best_of_many": 0.5,
+          "beam_no_merge_l1_freq": 0.6666666666666666,
+          "masked_best_of_many": 0.6666666666666666,
+          "oracle": 1.0
+        },
+        "pass1_headroom": {
+          "greedy": 0.2,
+          "self_consistency": 0.2,
+          "savi_l0_support": 0.5,
+          "savi_l0_freq": 0.4,
+          "savi_l1_freq": 0.6,
+          "best_of_many": 0.4,
+          "beam_no_merge_l1_freq": 0.6,
+          "masked_best_of_many": 0.6,
+          "oracle": 1.0
+        },
+        "tokens_mean": {
+          "greedy": 7.0,
+          "self_consistency": 55.666666666666664,
+          "savi_l0_support": 350.0,
+          "savi_l0_freq": 350.0,
+          "savi_l1_freq": 112.0,
+          "best_of_many": 116.33333333333333,
+          "beam_no_merge_l1_freq": 122.0,
+          "masked_best_of_many": 128.0,
+          "oracle": 0.0
+        },
+        "H1_savi_vs_best_of_many_isotoken": {
+          "delta": 0.2,
+          "lo": -0.2,
+          "hi": 0.6,
+          "n": 10
+        },
+        "H4_savi_vs_beam_no_merge": {
+          "delta": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 10
+        },
+        "T1_decomposition": {
+          "masked_minus_best_of_many": {
+            "delta": 0.2,
+            "lo": -0.2,
+            "hi": 0.6,
+            "n": 10
+          },
+          "savi_minus_masked": {
+            "delta": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n": 10
+          }
+        },
+        "keff_parsed_mean": 4.508333333333334,
+        "keff_feasible_mean": 0.46249999999999997,
+        "parse_rate": 1.0,
+        "H5_freq_edge_ece": {
+          "ece": 0.10655737704918032,
+          "n": 61,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 1,
+              "n": 34,
+              "mean_p": 0.125,
+              "frac_solvable": 0.23529411764705882
+            },
+            {
+              "bin": 2,
+              "n": 12,
+              "mean_p": 0.25,
+              "frac_solvable": 0.16666666666666666
+            },
+            {
+              "bin": 3,
+              "n": 6,
+              "mean_p": 0.375,
+              "frac_solvable": 0.3333333333333333
+            },
+            {
+              "bin": 4,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 5,
+              "n": 3,
+              "mean_p": 0.5,
+              "frac_solvable": 0.0
+            },
+            {
+              "bin": 6,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 7,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 8,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 9,
+              "n": 6,
+              "mean_p": 1.0,
+              "frac_solvable": 1.0
+            }
+          ]
+        },
+        "merge_ratio": 5.082371794871795,
+        "n_instrumented": 6,
+        "per_instance": [
+          {
+            "id": "gen-11-000",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 336,
+                "exec": 111
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 336,
+                "exec": 111
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 120,
+                "exec": 80,
+                "merge_ratio": 5.2
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 126,
+                "exec": 54,
+                "n_rollouts": 18,
+                "token_target": 120,
+                "token_ratio": 1.05
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 96
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 96,
+                "n_rollouts": 2
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 5,
+              "keff_parsed_mean": 2.8,
+              "keff_feasible_mean": 1.4,
+              "keff_per_depth": [
+                5.0,
+                3.5,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-11-003",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 384,
+                "exec": 128
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 384,
+                "exec": 128
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 192,
+                "exec": 128,
+                "merge_ratio": 5.0
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 196,
+                "exec": 84,
+                "n_rollouts": 28,
+                "token_target": 192,
+                "token_ratio": 1.0208333333333333
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 192,
+                "exec": 128
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 192,
+                "exec": 128,
+                "n_rollouts": 3
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 8,
+              "keff_parsed_mean": 3.25,
+              "keff_feasible_mean": 1.375,
+              "keff_per_depth": [
+                7.0,
+                5.0,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-11-004",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "merge_ratio": NaN
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 28,
+                "exec": 12,
+                "n_rollouts": 4,
+                "token_target": 24,
+                "token_ratio": 1.1666666666666667
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16
+              },
+              "masked_best_of_many": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 1,
+              "keff_parsed_mean": 6.0,
+              "keff_feasible_mean": 0.0,
+              "keff_per_depth": [],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-11-006",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 336,
+                "exec": 112
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 336,
+                "exec": 112
+              },
+              "savi_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "merge_ratio": NaN
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 28,
+                "exec": 12,
+                "n_rollouts": 4,
+                "token_target": 24,
+                "token_ratio": 1.1666666666666667
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16
+              },
+              "masked_best_of_many": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 1,
+              "keff_parsed_mean": 5.0,
+              "keff_feasible_mean": 0.0,
+              "keff_per_depth": [],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-11-008",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 312,
+                "exec": 103
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 312,
+                "exec": 103
+              },
+              "savi_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "merge_ratio": NaN
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 28,
+                "exec": 12,
+                "n_rollouts": 4,
+                "token_target": 24,
+                "token_ratio": 1.1666666666666667
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16
+              },
+              "masked_best_of_many": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 1,
+              "keff_parsed_mean": 4.0,
+              "keff_feasible_mean": 0.0,
+              "keff_per_depth": [],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-11-009",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 1,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 1,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "merge_ratio": NaN
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 28,
+                "exec": 12,
+                "n_rollouts": 4,
+                "token_target": 24,
+                "token_ratio": 1.1666666666666667
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16
+              },
+              "masked_best_of_many": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 1,
+              "keff_parsed_mean": 6.0,
+              "keff_feasible_mean": 0.0,
+              "keff_per_depth": [],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-11-010",
+            "headroom": false,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 119
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 119
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 120,
+                "exec": 78,
+                "merge_ratio": 4.8
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 126,
+                "exec": 54,
+                "n_rollouts": 18,
+                "token_target": 120,
+                "token_ratio": 1.05
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 120,
+                "exec": 78
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 94,
+                "n_rollouts": 2
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-11-011",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 52,
+                "exec": 22
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 384,
+                "exec": 128
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 384,
+                "exec": 128
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 72,
+                "exec": 48,
+                "merge_ratio": 3.6666666666666665
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 73,
+                "exec": 31,
+                "n_rollouts": 11,
+                "token_target": 72,
+                "token_ratio": 1.0138888888888888
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 72,
+                "exec": 48
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 72,
+                "exec": 48,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-11-012",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 72,
+                "exec": 48,
+                "merge_ratio": 4.0
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 77,
+                "exec": 33,
+                "n_rollouts": 11,
+                "token_target": 72,
+                "token_ratio": 1.0694444444444444
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 72,
+                "exec": 48
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 72,
+                "exec": 48,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-11-013",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 1,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 1,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 336,
+                "exec": 112
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 336,
+                "exec": 112
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 240,
+                "exec": 160,
+                "merge_ratio": 7.1
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 245,
+                "exec": 105,
+                "n_rollouts": 35,
+                "token_target": 240,
+                "token_ratio": 1.0208333333333333
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 312,
+                "exec": 208
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 288,
+                "exec": 192,
+                "n_rollouts": 4
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-11-015",
+            "headroom": false,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 1,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 312,
+                "exec": 104
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 312,
+                "exec": 104
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 312,
+                "exec": 208,
+                "merge_ratio": 6.6923076923076925
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 315,
+                "exec": 135,
+                "n_rollouts": 45,
+                "token_target": 312,
+                "token_ratio": 1.0096153846153846
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 312,
+                "exec": 208
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 240,
+                "n_rollouts": 5
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-11-020",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 7,
+                "exec": 3
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 56,
+                "exec": 24
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 360,
+                "exec": 120
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 120,
+                "exec": 80,
+                "merge_ratio": 4.2
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 126,
+                "exec": 54,
+                "n_rollouts": 18,
+                "token_target": 120,
+                "token_ratio": 1.05
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 96
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 168,
+                "exec": 112,
+                "n_rollouts": 3
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          }
+        ]
+      },
+      "5": {
+        "k": 5,
+        "depth": 4,
+        "n_instances": 12,
+        "n_headroom": 11,
+        "headroom_ids": [
+          "gen-12-000",
+          "gen-12-001",
+          "gen-12-002",
+          "gen-12-003",
+          "gen-12-004",
+          "gen-12-005",
+          "gen-12-007",
+          "gen-12-008",
+          "gen-12-009",
+          "gen-12-010",
+          "gen-12-011"
+        ],
+        "pass1_all": {
+          "greedy": 0.0,
+          "self_consistency": 0.0,
+          "savi_l0_support": 0.25,
+          "savi_l0_freq": 0.4166666666666667,
+          "savi_l1_freq": 0.8333333333333334,
+          "best_of_many": 0.5,
+          "beam_no_merge_l1_freq": 0.8333333333333334,
+          "masked_best_of_many": 0.75,
+          "oracle": 1.0
+        },
+        "pass1_headroom": {
+          "greedy": 0.0,
+          "self_consistency": 0.0,
+          "savi_l0_support": 0.2727272727272727,
+          "savi_l0_freq": 0.45454545454545453,
+          "savi_l1_freq": 0.8181818181818182,
+          "best_of_many": 0.45454545454545453,
+          "beam_no_merge_l1_freq": 0.8181818181818182,
+          "masked_best_of_many": 0.7272727272727273,
+          "oracle": 1.0
+        },
+        "tokens_mean": {
+          "greedy": 9.0,
+          "self_consistency": 71.83333333333333,
+          "savi_l0_support": 576.0,
+          "savi_l0_freq": 576.0,
+          "savi_l1_freq": 242.0,
+          "best_of_many": 244.08333333333334,
+          "beam_no_merge_l1_freq": 258.0,
+          "masked_best_of_many": 266.1666666666667,
+          "oracle": 0.0
+        },
+        "H1_savi_vs_best_of_many_isotoken": {
+          "delta": 0.36363636363636365,
+          "lo": 0.09090909090909091,
+          "hi": 0.6363636363636364,
+          "n": 11
+        },
+        "H4_savi_vs_beam_no_merge": {
+          "delta": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 11
+        },
+        "T1_decomposition": {
+          "masked_minus_best_of_many": {
+            "delta": 0.2727272727272727,
+            "lo": 0.0,
+            "hi": 0.5454545454545454,
+            "n": 11
+          },
+          "savi_minus_masked": {
+            "delta": 0.09090909090909091,
+            "lo": 0.0,
+            "hi": 0.2727272727272727,
+            "n": 11
+          }
+        },
+        "keff_parsed_mean": 4.202669552669552,
+        "keff_feasible_mean": 1.159163059163059,
+        "parse_rate": 1.0,
+        "H5_freq_edge_ece": {
+          "ece": 0.09598214285714288,
+          "n": 224,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 1,
+              "n": 145,
+              "mean_p": 0.125,
+              "frac_solvable": 0.21379310344827587
+            },
+            {
+              "bin": 2,
+              "n": 40,
+              "mean_p": 0.25,
+              "frac_solvable": 0.325
+            },
+            {
+              "bin": 3,
+              "n": 14,
+              "mean_p": 0.375,
+              "frac_solvable": 0.2857142857142857
+            },
+            {
+              "bin": 4,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 5,
+              "n": 4,
+              "mean_p": 0.5,
+              "frac_solvable": 0.5
+            },
+            {
+              "bin": 6,
+              "n": 1,
+              "mean_p": 0.625,
+              "frac_solvable": 1.0
+            },
+            {
+              "bin": 7,
+              "n": 3,
+              "mean_p": 0.75,
+              "frac_solvable": 0.0
+            },
+            {
+              "bin": 8,
+              "n": 2,
+              "mean_p": 0.875,
+              "frac_solvable": 0.0
+            },
+            {
+              "bin": 9,
+              "n": 15,
+              "mean_p": 1.0,
+              "frac_solvable": 1.0
+            }
+          ]
+        },
+        "merge_ratio": 3.5216581398399582,
+        "n_instrumented": 6,
+        "per_instance": [
+          {
+            "id": "gen-12-000",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 168,
+                "exec": 112,
+                "merge_ratio": 3.2857142857142856
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 171,
+                "exec": 76,
+                "n_rollouts": 19,
+                "token_target": 168,
+                "token_ratio": 1.0178571428571428
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 168,
+                "exec": 112
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 168,
+                "exec": 112,
+                "n_rollouts": 2
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 7,
+              "keff_parsed_mean": 4.285714285714286,
+              "keff_feasible_mean": 1.1428571428571428,
+              "keff_per_depth": [
+                7.0,
+                5.666666666666667,
+                4.0,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-12-001",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 191
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 120,
+                "exec": 80,
+                "merge_ratio": 2.6
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 126,
+                "exec": 56,
+                "n_rollouts": 14,
+                "token_target": 120,
+                "token_ratio": 1.05
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 120,
+                "exec": 80
+              },
+              "masked_best_of_many": {
+                "ok": 0,
+                "tokens": 144,
+                "exec": 96,
+                "n_rollouts": 3
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 5,
+              "keff_parsed_mean": 5.0,
+              "keff_feasible_mean": 1.0,
+              "keff_per_depth": [
+                7.0,
+                5.5,
+                6.0,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-12-002",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 600,
+                "exec": 200
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 600,
+                "exec": 199
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 240,
+                "merge_ratio": 3.933333333333333
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 160,
+                "n_rollouts": 40,
+                "token_target": 360,
+                "token_ratio": 1.0
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 384,
+                "exec": 256
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 360,
+                "exec": 240,
+                "n_rollouts": 5
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 15,
+              "keff_parsed_mean": 4.066666666666666,
+              "keff_feasible_mean": 1.2666666666666666,
+              "keff_per_depth": [
+                8.0,
+                6.0,
+                3.25,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-12-003",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 70,
+                "exec": 31
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 600,
+                "exec": 198
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 600,
+                "exec": 200
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 264,
+                "exec": 176,
+                "merge_ratio": 4.363636363636363
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 266,
+                "exec": 118,
+                "n_rollouts": 30,
+                "token_target": 264,
+                "token_ratio": 1.0075757575757576
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 312,
+                "exec": 208
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 336,
+                "exec": 224,
+                "n_rollouts": 4
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 11,
+              "keff_parsed_mean": 3.5454545454545454,
+              "keff_feasible_mean": 1.3636363636363635,
+              "keff_per_depth": [
+                8.0,
+                5.666666666666667,
+                2.75,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-12-004",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 552,
+                "exec": 184
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 552,
+                "exec": 184
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 96,
+                "merge_ratio": 2.5
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 144,
+                "exec": 64,
+                "n_rollouts": 16,
+                "token_target": 144,
+                "token_ratio": 1.0
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 96
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 146,
+                "exec": 94,
+                "n_rollouts": 2
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 6,
+              "keff_parsed_mean": 4.5,
+              "keff_feasible_mean": 1.0,
+              "keff_per_depth": [
+                6.0,
+                5.666666666666667,
+                3.0,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-12-005",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 264,
+                "exec": 176,
+                "merge_ratio": 4.0
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 264,
+                "exec": 117,
+                "n_rollouts": 30,
+                "token_target": 264,
+                "token_ratio": 1.0
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 264,
+                "exec": 176
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 336,
+                "exec": 224,
+                "n_rollouts": 5
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 11,
+              "keff_parsed_mean": 3.8181818181818183,
+              "keff_feasible_mean": 1.1818181818181819,
+              "keff_per_depth": [
+                7.0,
+                6.666666666666667,
+                3.0,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-12-006",
+            "headroom": false,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 96,
+                "merge_ratio": 2.8333333333333335
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 64,
+                "n_rollouts": 16,
+                "token_target": 144,
+                "token_ratio": 1.0
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 144,
+                "exec": 96
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 192,
+                "exec": 128,
+                "n_rollouts": 2
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-12-007",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 456,
+                "exec": 304,
+                "merge_ratio": 4.0
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 459,
+                "exec": 204,
+                "n_rollouts": 51,
+                "token_target": 456,
+                "token_ratio": 1.006578947368421
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 504,
+                "exec": 336
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 456,
+                "exec": 304,
+                "n_rollouts": 5
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-12-008",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 600,
+                "exec": 200
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 600,
+                "exec": 200
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 480,
+                "exec": 320,
+                "merge_ratio": 4.666666666666667
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 482,
+                "exec": 214,
+                "n_rollouts": 54,
+                "token_target": 480,
+                "token_ratio": 1.0041666666666667
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 504,
+                "exec": 336
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 480,
+                "exec": 320,
+                "n_rollouts": 7
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-12-009",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 192
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 432,
+                "exec": 288,
+                "merge_ratio": 5.555555555555555
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 432,
+                "exec": 192,
+                "n_rollouts": 48,
+                "token_target": 432,
+                "token_ratio": 1.0
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 480,
+                "exec": 320
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 480,
+                "exec": 320,
+                "n_rollouts": 5
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-12-010",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 552,
+                "exec": 184
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 552,
+                "exec": 184
+              },
+              "savi_l1_freq": {
+                "ok": 0,
+                "tokens": 48,
+                "exec": 32,
+                "merge_ratio": 1.0
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 54,
+                "exec": 24,
+                "n_rollouts": 6,
+                "token_target": 48,
+                "token_ratio": 1.125
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 0,
+                "tokens": 48,
+                "exec": 32
+              },
+              "masked_best_of_many": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 44,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-12-011",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 9,
+                "exec": 4
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 72,
+                "exec": 32
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 552,
+                "exec": 184
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 552,
+                "exec": 184
+              },
+              "savi_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "merge_ratio": NaN
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 27,
+                "exec": 12,
+                "n_rollouts": 3,
+                "token_target": 24,
+                "token_ratio": 1.125
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16
+              },
+              "masked_best_of_many": {
+                "ok": 0,
+                "tokens": 24,
+                "exec": 16,
+                "n_rollouts": 1
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          }
+        ]
+      }
+    }
+  },
+  "synthesis": {
+    "ks": [
+      4,
+      5
+    ],
+    "H1_deepest": {
+      "delta": 0.36363636363636365,
+      "lo": 0.09090909090909091,
+      "hi": 0.6363636363636364,
+      "n": 11
+    },
+    "H2_depth_curve": {
+      "deltas_by_k": {
+        "4": 0.2,
+        "5": 0.36363636363636365
+      },
+      "ci_by_k": {
+        "4": [
+          -0.2,
+          0.6
+        ],
+        "5": [
+          0.09090909090909091,
+          0.6363636363636364
+        ]
+      },
+      "strictly_increasing": true,
+      "shallow_k": 4,
+      "shallow_delta_le_0": false,
+      "deepest_k": 5,
+      "deepest_delta_gt_0_ci_excl_0": true
+    },
+    "H3_keff": {
+      "keff_decoupled_by_k": {
+        "4": 4.508333333333334,
+        "5": 4.202669552669552
+      }
+    },
+    "H4_by_k": {
+      "4": {
+        "delta": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 10
+      },
+      "5": {
+        "delta": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 11
+      }
+    },
+    "H5_ece_by_k": {
+      "4": 0.10655737704918032,
+      "5": 0.09598214285714288
+    },
+    "gates": {
+      "V1_headroom_nonempty": true,
+      "V3_oracle_gt_best_of_many_isotoken": true,
+      "Phi_works_merge_ratio_gt1": true
+    },
+    "holm_family": {
+      "H1_deepest_reject": true,
+      "H4_deepest_reject": false
+    }
+  },
+  "log": [
+    "[15:50:23] PLAN3 run_joint tier=B ks=[4, 5] n=12 K=8 N=8 tau=1.0 seed=0",
+    "[15:50:23] Tier B: loading decoupled adapter contrib-savi/experiments/Haonan/decouple-training/countdown-decode/outputs/adapter_decoupled_s0 on cuda",
+    "[15:50:42] sharding: running only profile=decoupled",
+    "[15:50:42] === profile: decoupled ===",
+    "[15:52:15]     [decoupled] k=4 1/12 savi_l1=1 bom=1 (savi_tok=120 bom_tok=126 r=18) 93s memo=230",
+    "[15:54:19]     [decoupled] k=4 2/12 savi_l1=1 bom=1 (savi_tok=192 bom_tok=196 r=28) 217s memo=471",
+    "[15:55:12]     [decoupled] k=4 3/12 savi_l1=0 bom=0 (savi_tok=24 bom_tok=28 r=4) 270s memo=859",
+    "[15:56:04]     [decoupled] k=4 4/12 savi_l1=0 bom=1 (savi_tok=24 bom_tok=28 r=4) 321s memo=1040",
+    "[15:56:52]     [decoupled] k=4 5/12 savi_l1=0 bom=0 (savi_tok=24 bom_tok=28 r=4) 370s memo=1341",
+    "[15:57:43]     [decoupled] k=4 6/12 savi_l1=0 bom=0 (savi_tok=24 bom_tok=28 r=4) 420s memo=1687",
+    "[15:59:09]     [decoupled] k=4 7/12 savi_l1=1 bom=1 (savi_tok=120 bom_tok=126 r=18) 506s memo=1927",
+    "[16:00:17]     [decoupled] k=4 8/12 savi_l1=1 bom=0 (savi_tok=72 bom_tok=73 r=11) 575s memo=2268",
+    "[16:01:25]     [decoupled] k=4 9/12 savi_l1=1 bom=0 (savi_tok=72 bom_tok=77 r=11) 643s memo=2666",
+    "[16:03:33]     [decoupled] k=4 10/12 savi_l1=1 bom=1 (savi_tok=240 bom_tok=245 r=35) 771s memo=2825",
+    "[16:05:57]     [decoupled] k=4 11/12 savi_l1=1 bom=1 (savi_tok=312 bom_tok=315 r=45) 915s memo=2955",
+    "[16:07:25]     [decoupled] k=4 12/12 savi_l1=1 bom=0 (savi_tok=120 bom_tok=126 r=18) 1003s memo=3192",
+    "[16:07:26]   k=4: savi_l1=0.600 best_of_many=0.400 H1=+0.200[-0.200,+0.600] Keff=4.51 merge=5.1 ECE=0.107",
+    "[16:09:38]     [decoupled] k=5 1/12 savi_l1=1 bom=0 (savi_tok=168 bom_tok=171 r=19) 132s memo=5925",
+    "[16:11:23]     [decoupled] k=5 2/12 savi_l1=1 bom=0 (savi_tok=120 bom_tok=126 r=14) 237s memo=7275",
+    "[16:15:07]     [decoupled] k=5 3/12 savi_l1=1 bom=1 (savi_tok=360 bom_tok=360 r=40) 461s memo=11020",
+    "[16:18:05]     [decoupled] k=5 4/12 savi_l1=1 bom=1 (savi_tok=264 bom_tok=266 r=30) 639s memo=13421",
+    "[16:20:08]     [decoupled] k=5 5/12 savi_l1=1 bom=0 (savi_tok=144 bom_tok=144 r=16) 762s memo=14561",
+    "[16:23:07]     [decoupled] k=5 6/12 savi_l1=1 bom=1 (savi_tok=264 bom_tok=264 r=30) 942s memo=17564",
+    "[16:25:06]     [decoupled] k=5 7/12 savi_l1=1 bom=1 (savi_tok=144 bom_tok=144 r=16) 1061s memo=18294",
+    "[16:29:20]     [decoupled] k=5 8/12 savi_l1=1 bom=0 (savi_tok=456 bom_tok=459 r=51) 1314s memo=21196",
+    "[16:33:38]     [decoupled] k=5 9/12 savi_l1=1 bom=1 (savi_tok=480 bom_tok=482 r=54) 1573s memo=24641",
+    "[16:37:34]     [decoupled] k=5 10/12 savi_l1=1 bom=1 (savi_tok=432 bom_tok=432 r=48) 1808s memo=25913",
+    "[16:39:11]     [decoupled] k=5 11/12 savi_l1=0 bom=0 (savi_tok=48 bom_tok=54 r=6) 1905s memo=28553",
+    "[16:40:27]     [decoupled] k=5 12/12 savi_l1=0 bom=0 (savi_tok=24 bom_tok=27 r=3) 1981s memo=30693",
+    "[16:40:27]   k=5: savi_l1=0.818 best_of_many=0.455 H1=+0.364[+0.091,+0.636] Keff=4.20 merge=3.5 ECE=0.096",
+    "[16:40:27]   decoupled memo final: {'size': 30693, 'hits': 47741, 'misses': 30693}"
+  ]
+}

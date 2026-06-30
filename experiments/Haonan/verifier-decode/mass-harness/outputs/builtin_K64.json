@@ -1,0 +1,1127 @@
+{
+ "plan": "mass-harness-countdown",
+ "config": {
+  "set": "builtin",
+  "Kbig": 64,
+  "K": 8,
+  "N": 8,
+  "tau": 1.0,
+  "lams": "0.5,1",
+  "seed": 0,
+  "gen_n": 24,
+  "gen_k": 4
+ },
+ "summary": {
+  "all": {
+   "n": 28,
+   "exact": {
+    "solve_rate": 0.5,
+    "only_decode": 0.0,
+    "novel_of_solved": 0.21428571428571427,
+    "stitch_of_solved": 0.0
+   },
+   "learned": {
+    "solve_rate": 0.42857142857142855,
+    "only_decode": 0.0,
+    "novel_of_solved": 0.25,
+    "stitch_of_solved": 0.0
+   },
+   "freq": {
+    "solve_rate": 0.35714285714285715,
+    "only_decode": 0.0,
+    "novel_of_solved": 0.1,
+    "stitch_of_solved": 0.0
+   }
+  },
+  "sparse_subset": {
+   "n": 4,
+   "exact": {
+    "solve_rate": 0.0,
+    "only_decode": 0.0,
+    "novel_of_solved": null,
+    "stitch_of_solved": null
+   },
+   "learned": {
+    "solve_rate": 0.0,
+    "only_decode": 0.0,
+    "novel_of_solved": null,
+    "stitch_of_solved": null
+   },
+   "freq": {
+    "solve_rate": 0.0,
+    "only_decode": 0.0,
+    "novel_of_solved": null,
+    "stitch_of_solved": null
+   }
+  },
+  "n_total": 28,
+  "n_solvable": 24,
+  "n_sparse": 4
+ },
+ "records": [
+  {
+   "id": "bs-00",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-01",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 48
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    }
+   }
+  },
+  {
+   "id": "bs-02",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 10,
+   "mass_hat": 0.15625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 264
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-03",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    }
+   }
+  },
+  {
+   "id": "bs-04",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 312
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 312
+    }
+   }
+  },
+  {
+   "id": "bs-05",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 6,
+   "mass_hat": 0.09375,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 48
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-06",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    }
+   }
+  },
+  {
+   "id": "bs-07",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 5,
+   "mass_hat": 0.078125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-08",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-09",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 3,
+   "mass_hat": 0.046875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-10",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 3,
+   "mass_hat": 0.046875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-11",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 9,
+   "mass_hat": 0.140625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-12",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    }
+   }
+  },
+  {
+   "id": "bs-13",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-14",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 10,
+   "mass_hat": 0.15625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 192
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-15",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 4,
+   "mass_hat": 0.0625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 2,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 288
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 2,
+     "tokens": 288
+    }
+   }
+  },
+  {
+   "id": "bs-16",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 4,
+   "mass_hat": 0.0625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 48
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-17",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 12,
+   "mass_hat": 0.1875,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 72
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-18",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 4,
+   "mass_hat": 0.0625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 1,
+     "tokens": 97
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 337
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 1,
+     "tokens": 337
+    }
+   }
+  },
+  {
+   "id": "bs-19",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 10,
+   "mass_hat": 0.15625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 168
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-20",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 8,
+   "mass_hat": 0.125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 192
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 1,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-21",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 13,
+   "mass_hat": 0.203125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 1,
+     "tokens": 192
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": true,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 2,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-22",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 18,
+   "mass_hat": 0.28125,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 240
+    },
+    "freq": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": true,
+     "only_decode": false,
+     "novel": false,
+     "stitch": false,
+     "n_edges": 3,
+     "n_covered": 3,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-23",
+   "k": 4,
+   "solvable": true,
+   "Kbig": 64,
+   "n_correct_chains": 1,
+   "mass_hat": 0.015625,
+   "chain_solve": true,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 48
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-24",
+   "k": 4,
+   "solvable": false,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 360
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 360
+    }
+   }
+  },
+  {
+   "id": "bs-25",
+   "k": 4,
+   "solvable": false,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 384
+    }
+   }
+  },
+  {
+   "id": "bs-26",
+   "k": 4,
+   "solvable": false,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 336
+    }
+   }
+  },
+  {
+   "id": "bs-27",
+   "k": 4,
+   "solvable": false,
+   "Kbig": 64,
+   "n_correct_chains": 0,
+   "mass_hat": 0.0,
+   "chain_solve": false,
+   "arms": {
+    "exact": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 24
+    },
+    "freq": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 312
+    },
+    "learned": {
+     "solved": false,
+     "only_decode": false,
+     "novel": null,
+     "stitch": null,
+     "n_edges": null,
+     "n_covered": null,
+     "tokens": 312
+    }
+   }
+  }
+ ]
+}

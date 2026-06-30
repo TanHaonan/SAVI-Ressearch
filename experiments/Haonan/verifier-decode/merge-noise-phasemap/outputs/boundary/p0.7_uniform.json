@@ -1,0 +1,80 @@
+{
+ "plan": "merge-noise-phasemap",
+ "config": {
+  "gs": "0",
+  "depths": [
+   24
+  ],
+  "arms": [
+   "A3",
+   "A4"
+  ],
+  "eps": [
+   0.18
+  ],
+  "modes": [
+   "fn"
+  ],
+  "lams": [
+   0.1
+  ],
+  "rho": 1.0,
+  "profile": "uniform",
+  "n": 24,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "p": 0.7,
+  "K": 8,
+  "N": 16,
+  "tau": 1.0,
+  "bootstrap_n": 10000,
+  "noise_seed": 0
+ },
+ "cells": [
+  {
+   "g": 0,
+   "g_label": "0",
+   "depth": 24,
+   "n_inst": 24,
+   "n_seeds": 8,
+   "n_pooled": 192,
+   "ceiling": 1.0,
+   "merge_R": null,
+   "sample_mult": null,
+   "pass1": {
+    "A3_fn_eps0.18": 0.78125,
+    "A4_fn_eps0.18_lam0.1": 1.0
+   },
+   "mean_exec": {
+    "A3_fn_eps0.18": 3598.3333333333335,
+    "A4_fn_eps0.18_lam0.1": 3340.1875
+   },
+   "sel_pass1": {
+    "A3_fn_eps0.18": 0.5625,
+    "A4_fn_eps0.18_lam0.1": 0.5364583333333334
+   },
+   "D1": {
+    "A3_fn_eps0.18": {
+     "delta": 0.21875,
+     "lo": 0.140625,
+     "hi": 0.29687500000000006,
+     "n": 192
+    },
+    "A4_fn_eps0.18_lam0.1": {
+     "delta": 0.46354166666666663,
+     "lo": 0.39583333333333337,
+     "hi": 0.5364583333333333,
+     "n": 192
+    }
+   }
+  }
+ ]
+}

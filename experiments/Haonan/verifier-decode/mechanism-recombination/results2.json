@@ -1,0 +1,126 @@
+{
+  "corrected_clean_rerun": {
+    "what": "AUTHORITATIVE corrected verdict. After the Verify agents caught the cross-T generator-leak bug, the bug was fixed (LatticeDomain.canon now = (s,r,T); cache deleted) and the sweep re-run CLEAN with a FRESH PER-INSTANCE generator (immune to any cross-instance sharing). This block SUPERSEDES synthesis.claim_supported='no' below; the 'contaminated_headline_table_DO_NOT_TRUST' and the no-verdict are retained only for the record.",
+    "rerun_config": "TWO independent clean re-runs AGREE: (a) fixed harness (canon incl T, cache deleted), 8 seeds, 24 inst/depth, paired bootstrap n=10000 -> outputs/lattice_sweep/results2.json (AUTHORITATIVE); (b) per-instance fresh generator probe, 6 seeds -> clean_rerun.py / outputs/clean_rerun/clean_results.txt (corroborating). Both give CI-positive, monotone-in-depth D1_exec; exact deltas differ slightly by seed count.",
+    "claim_supported": "yes (on the synthetic lattice substrate; real-domain confirmation still pending a DEEP cheap-oracle real domain)",
+    "headline": "On the honest moves/exec axis, with a freq (or verifier-masked) headline arm, global decode BEATS compute-matched selection at every depth >= 8, CI excluding 0, and the margin RISES MONOTONICALLY with horizon depth. Beam width K barely matters once the leak is fixed (depth is the driver). The PLAN2 negatives were ENTIRELY the contamination bug (the predicted sign-flips landed exactly).",
+    "D1_exec_clean_savi_freq_minus_iso_exec_p0.7_AUTHORITATIVE_8seed_harness": {
+      "D4":  {"K8": [0.000, 0.000, 0.000], "K16": [0.000, 0.000, 0.000], "K32": [0.000, 0.000, 0.000], "note": "null: shallow, all arms saturate at 1.0 (correct no-headroom control)"},
+      "D8":  {"K8": [0.089, 0.052, 0.130], "K16": [0.089, 0.052, 0.130], "K32": [0.089, 0.052, 0.130], "savi_freq": 1.000, "iso_exec": 0.911},
+      "D16": {"K8": [0.281, 0.214, 0.349], "K16": [0.255, 0.193, 0.318], "K32": [0.245, 0.182, 0.307], "savi_freq": "0.964-1.000", "iso_exec": "0.68-0.76"},
+      "D24": {"K8": [0.437, 0.365, 0.510], "K16": [0.458, 0.385, 0.531], "K32": [0.438, 0.370, 0.505], "savi_freq": "0.917-1.000", "iso_exec": "0.48-0.56"}
+    },
+    "D1_exec_clean_6seed_probe_corroborating_p0.7": {
+      "D8": "+0.146..+0.167", "D16": "+0.312..+0.375", "D24": "+0.382..+0.417", "note": "per-instance gen probe; same direction + monotone rise + CI>0 as the 8-seed harness"
+    },
+    "savi_freq_pass_clean_p0.7": {"D8": "0.98-1.00", "D16": "0.94-1.00", "D24": "0.89-1.00"},
+    "iso_exec_pass_clean_p0.7": {"D4": 1.000, "D8": 0.833, "D16": 0.625, "D24": "0.50-0.58", "monotone_decay": true},
+    "D_verif_clean_savi_verifier_on_minus_iso_exec_p0.7": {"D8": 0.167, "D16": 0.375, "D24": "0.42-0.50", "shape": "positive, monotone rising"},
+    "D_merge_clean_savi_freq_minus_beam_no_merge_freq_p0.7": {"D8": "0.03-0.04", "D16": "0.07-0.13", "D24": "0.12-0.13", "shape": "positive at depth>=8 (Phi-merge contributes; smaller lever than the graded edge / the axis)"},
+    "k_gating_resolved": "Contaminated data made K=8 look negative; CLEAN K=8 is positive at every depth>=8 (+0.146/+0.312/+0.389). Beam width matters less than the bug suggested; depth is the real driver.",
+    "scope_and_caveats": [
+      "SEMI-SYNTHETIC: integer-sum Viterbi lattice (the algorithm's home turf, heavy position x time merging) + an oracle-defined competence generator. NOT a real LM.",
+      "The strong positive is lattice-only. The real-Phi confirm cells stay negative/null: Countdown D1_exec -0.083 at effective depth ~3 (builtin_small is 4-number = 3 ops; the D4 lattice cell is ALSO null/zero, so this is consistent with 'advantage needs depth', not a contradiction), algebra null (mock step-generator is the binding constraint). A real domain with a CHEAP solvability oracle and DEEP horizon is needed for real-domain confirmation; countdown.reachable is exponential and caps depth ~5.",
+      "freq >> support partly because synthetic P_p makes frequency track quality directly; a real LM's frequency signal may be weaker (cf. M1/M2 prereg D2 'freq ~= support')."
+    ],
+    "bottom_line": "Two artifacts removed (PLAN1 candidate-parity axis; PLAN2 cross-T contamination), the SAVI mechanism premise is SUPPORTED on a controlled deep substrate: global decode + graded/verifier scoring beats compute-matched selection on the honest axis, margin growing with depth. This DE-RISKS and PREDICTS the decisive real-LM run; it does not replace it (real-LM end-to-end still gated on the emission line)."
+  },
+  "synthesis": {
+    "what": "PLAN2 corrected-run synthesis (Phase 6). Distilled top-level verdict over the lattice sweep (outputs/lattice_sweep/results2.json) and the real-Phi confirm cells (outputs/confirm/results.json). This block does NOT contain raw per-cell data; see those files for per_cell.",
+    "substrate_label": "SEMI-SYNTHETIC (integer-sum Viterbi lattice + competence-parameterized fair generator P_p; not a real LM). Real-LM end-to-end number remains gated on the emission line.",
+    "claim_under_test": "On the honest moves/exec axis, with a freq (and verifier-masked) headline arm and adequate beam, global decode beats compute-matched selection, and the margin GROWS with horizon depth.",
+    "claim_supported": "no",
+    "why_no": [
+      "MATERIAL BUG (controlling): the fair generator memoizes good/bad classification AND seeds its RNG by canon(state)=(s,r), which omits the per-instance target T. One generator is built per (depth,K,p,seed) cell (run_mechanism2._run_cell line 173) and shared across all 24 instances, which have different T but overlapping (s,r) canons. The first instance to touch an (s,r) fixes weights+seed under the WRONG T for all later instances. solvable-based classification depends on T, so savi_freq is biased downward. Every pass@1 / D1_exec / D_verif / D_merge in outputs/lattice_sweep/results2.json came from this contaminated path (reproduced bit-for-bit by the verifier). The sweep must be re-run with a per-instance generator (or canon=(s,r,T)) and the current cache.json deleted before any conclusion.",
+      "DEPTH SUB-CLAIM FALSE even in the contaminated data: D1_exec is non-monotone in depth in every (K,p) slice (rises to a D16 peak then DECAYS at D24; negative and worsening at K=8 for D>=8). Beam width K, not depth, gates the sign. 'Margin grows with depth' is not what the data show."
+    ],
+    "verify_verdicts": {
+      "exec_parity_accounting": {
+        "ok": true,
+        "note": "Honest axis verified: exec-parity holds across all 4608 paired instances; exec counted for every rollout (not stopped at first win); headline numerator is savi_freq/savi_verifier_on (not support); no oracle injection into any arm."
+      },
+      "oracle_and_substrate_wiring": {
+        "ok": false,
+        "note": "solvable oracle PROVEN exact (brute-force cross-check, 0 disagreements; ceiling=1.0 on all 768 instances). BUT cross-instance generator leak (canon/seed omits T) contaminates every headline number. Verifier's clean per-instance re-run FLIPS SIGNS on the negative cells: D8/K8 D1_exec -0.0625 -> +0.052; D16/K8 -0.177 -> +0.292; D24/K32 +0.276 -> +0.396 (and savi_freq 0.745 -> 1.000). Published numbers are biased strongly downward.",
+        "spot_reruns_clean_generator": {
+          "D8_K8": {"savi_freq": "0.651->0.974", "iso_exec": "0.713->0.922", "D1_exec": "-0.0625 -> +0.052 (SIGN FLIP)"},
+          "D16_K8": {"savi_freq": "0.359->0.969", "D1_exec": "-0.177 -> +0.292 (SIGN FLIP)"},
+          "D24_K32": {"savi_freq": "0.745->1.000", "D1_exec": "+0.276 -> +0.396"}
+        }
+      },
+      "determinism_and_depth_claim": {
+        "ok": false,
+        "note": "Determinism PASS (bit-identical cache-free reproduction of D8/K16/p0.7). iso_exec-decays-with-depth control PASS. BUT 'D1_exec rises with depth' NOT CI-supported: non-monotone in every (K,p) slice; real lever is beam width K. Across 24 cells: 16 CI-strictly-positive, 5 CI-strictly-negative (all K=8, depth>=8), 3 spanning zero (K=16 deep)."
+      }
+    },
+    "contaminated_headline_table_DO_NOT_TRUST": {
+      "note": "Reported only to show what the bug moved. All values from the contaminated shared-generator path; re-run required.",
+      "D1_exec_savi_freq_minus_iso_exec": {
+        "p0.7": {
+          "D4":  {"K8": [0.193, 0.141, 0.250],  "K16": [0.193, 0.141, 0.250],  "K32": [0.193, 0.141, 0.250]},
+          "D8":  {"K8": [-0.062, -0.109, -0.016], "K16": [0.234, 0.177, 0.297], "K32": [0.234, 0.177, 0.297]},
+          "D16": {"K8": [-0.161, -0.234, -0.089], "K16": [0.089, 0.031, 0.146], "K32": [0.464, 0.391, 0.531]},
+          "D24": {"K8": [-0.125, -0.203, -0.047], "K16": [0.036, -0.031, 0.104], "K32": [0.276, 0.214, 0.339]}
+        },
+        "p0.6": {
+          "D4":  {"K8": [0.188, 0.135, 0.245],  "K16": [0.188, 0.135, 0.245],  "K32": [0.188, 0.135, 0.245]},
+          "D8":  {"K8": [-0.036, -0.083, 0.010], "K16": [0.292, 0.229, 0.359], "K32": [0.292, 0.229, 0.359]},
+          "D16": {"K8": [-0.104, -0.161, -0.047], "K16": [0.073, 0.026, 0.120], "K32": [0.448, 0.380, 0.516]},
+          "D24": {"K8": [-0.141, -0.193, -0.089], "K16": [-0.042, -0.083, 0.000], "K32": [0.276, 0.214, 0.339]}
+        }
+      },
+      "D_verif_savi_verifier_on_minus_iso_exec_p0.7": {
+        "D4": 0.193, "D8_K8": 0.281, "D16": "0.464..0.484", "D24": "0.531..0.568 [hi CI 0.635]",
+        "shape": "positive and monotone-rising with depth (oracle mask hits ceiling 1.0 for D<=16); levels still on contaminated iso_exec baseline"
+      },
+      "D_merge_savi_freq_minus_beam_no_merge_freq_p0.7_K32": {
+        "D4": 0.000, "D8": 0.406, "D16": [0.698, 0.630, 0.760], "D24": 0.495,
+        "shape": "positive, grows with depth at adequate beam (D4/K32=0: 32-wide beam saturates shallow lattice)"
+      },
+      "axis_artifact_cell_D16_K8_p0.6": {
+        "iso_candidates_pass": 0.677, "iso_exec_pass": 0.484, "savi_freq_pass": 0.380, "n": 192,
+        "note": "candidate parity hands selection ~depth x more complete attempts than exec parity (the PLAN1 bug, reproduced directly)"
+      },
+      "control_iso_exec_decays_with_depth_K32_p0.7": {
+        "D4": 0.807, "D8": 0.766, "D16": 0.536, "D24": 0.469, "monotone_decay": true
+      },
+      "control_C3_ceiling_all_one": true
+    },
+    "real_phi_confirm_cells": {
+      "note": "Not affected by the lattice-canon bug (different domains). Single mid-depth points, not a depth sweep.",
+      "countdown": {
+        "p": 0.7, "K": 16, "N": 16, "max_depth": 6, "n_flags": 48,
+        "savi_freq": 0.875, "iso_exec": 0.958, "iso_candidates": 1.000,
+        "D1_exec": [-0.083, -0.167, -0.021],
+        "axis_artifact_iso_cand_minus_iso_exec": [0.042, 0.000, 0.104],
+        "reading": "freq trellis does NOT beat exec-matched selection at depth 6 (CI<0); PLAN1 accounting artifact reproduced on a real domain"
+      },
+      "algebra": {
+        "p": 0.7, "K": 8, "N": 8, "max_depth": 8, "n_instances": 5, "shrunk_from": 8,
+        "savi_freq": 0.0, "iso_exec": 0.0, "D1_exec": [0.0, 0.0, 0.0],
+        "reading": "all arms 0 on MOCK substrate (mock step-generator is the binding constraint, not the decoder); exec-parity holds end-to-end but no ranking signal"
+      }
+    },
+    "settled": [
+      "PLAN1 -0.6..-0.9 D1 was substantially a candidate-parity accounting artifact (axis-artifact cell + Countdown confirm both reproduce it).",
+      "Honest exec axis with graded/verifier headline is the correct design.",
+      "solvable oracle is exact; lattice fair by construction (ceiling 1.0).",
+      "iso_exec decays with depth (structural premise) and determinism is bit-stable."
+    ],
+    "not_settled": [
+      "Whether the freq trellis beats compute-matched selection on the honest axis and whether the margin grows with depth (sweep contaminated; depth sub-claim already false in contaminated data).",
+      "Real-LM end-to-end number (gated on emission line).",
+      "Whether real reasoning has lattice-like semantic merging."
+    ],
+    "required_corrections": [
+      "Fix the leak: canon=(s,r,T) OR build a fresh generator per instance in _run_cell. (canon+T does not disable intra-decode Phi-merge; T is constant within a decode.)",
+      "Delete cache.json; re-run the full sweep; regenerate outputs/lattice_sweep/results2.json and RESULTS2.md.",
+      "Add a regression test: same (depth,seed,p), different T, one shared generator must match a private per-instance generator's per-step weights/samples.",
+      "Restate the headline as K-gated and non-monotone; report all 24 cells with CIs, flag the CI-negative K=8 cells and deep K=16 nulls."
+    ],
+    "raw_data_pointers": {
+      "lattice_sweep_per_cell": "outputs/lattice_sweep/results2.json",
+      "real_phi_confirm": "outputs/confirm/results.json"
+    }
+  }
+}

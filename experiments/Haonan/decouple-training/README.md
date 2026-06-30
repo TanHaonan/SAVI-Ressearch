@@ -17,6 +17,23 @@
 | §2（动机） | 真实大模型输出太尖（Qwen2.5-3B 上 top-1 ≈ 0.92），Viterbi ≈ 逐位置 marginal | 真实 emission 准确率差贴近 0；合成随机势 ≤ 0.05；仅对抗 fan 特例才分开 | `marginal-vs-path/` |
 | §6（边界） | 判别会迁移到自由生成，calibration 的形状停在答案位置 logit、不进自由生成 | 确定题 confident-wrong 0.29→0.01；歧义题 confident-commit 0.31 ≈ base 0.34 | `native-abstain/` |
 
+## 第三轮:把 verifier 打开(λ>0),给出完整当前状态(报告 `REPORT_round3.md`)
+
+trellis 解码 = 发射 × verifier(`DECODING_MODEL.md`)。上一轮停在 λ=0;这一轮把 λ>0 推到头,核心问题:等 token(可执行底物上为等 exec)的诚实口径下,全局解码能否解出采样基线(best-of-K + 判定)解不出的题——从"不能"到"能"?**结论:instance 层面没有这种效果;只有两个窄正面幸存(path 级重组、低能力 soft-value),且都不是 instance 级胜势。** 完整设置/边界见报告。底物各异(真实 Qwen3-4B Countdown / 合成 merge-lattice(无 LM、等 exec)/ 真实 PRM ProcessBench),逐行标注。
+
+| 报告位置 | 论断(plain) | 关键数字 | 目录 / 文件 |
+|---|---|---|---|
+| §1 | 域无关 trellis 解码器(发射 log(count/N) × verifier 硬 mask × Φ 合并 × backtrack),所有解码实验共用 | —(纯库;§1 实现引用) | `verifier-decode/decode_core/`(`decode.py` 的 `savi()`) |
+| §3.1 | λ=0 全局解码胜 greedy、候选对齐胜 self-consistency,但 token 对齐输给采样+验证 | savi 0.38(配对胜 SC +0.246);best-of-64 0.81@445tok vs savi 0.44@1158tok,配对 −0.375;独解 0 道 | `countdown-decode/`(`results.json`) |
+| §3.2 | λ>0 看似翻盘,优势全来自逐步 exact mask、trellis 部件 inert;换学习 value 即反输 | savi−masked_bom = 0/+0.09/0;learned value soft **−0.583**、hard −0.833 vs exact +0.167(k=6) | `verifier-decode/joint-lambda-decode/`(`outputs/t11_*.json`,`t14_value_k6.json`) |
+| §5.1 | 能力翻转:低能力区 soft 降权学习 value 胜等 exec selection,未触顶;硬 mask 在边界误差下死、soft 活 | p=0.5 **+0.29…+0.34**(3 模型 CI>0,pass1 .71–.76);无 verifier −0.125;硬 mask +0.354→−0.047 vs soft +0.245→+0.214 | `verifier-decode/merge-noise-phasemap/`(`outputs/phasemap/learned_p0.5.json`、`VERDICT_boundary_transfer.md`) |
+| §5.2 | path 级重组在合成 lattice 成立(verifier 门控),但正确路径多 → 升不到 instance 级(效率) | 正确路 **q≈10⁻¹¹**(log₁₀1/q=11.45),stitch 23–36%,无 verifier onlyDec 0.01;同题 ~10³·⁴–10⁴·² rollout 可达 | `verifier-decode/recombination-novelpath/`(`outputs/sweep.json`) |
+| §5.2 | 重组不迁移真实 AR:拼接处处为 0;唯一"选择不能"效应来自深档精确 oracle 引导搜索(非重组,学习难复制) | builtin 28:stitch=0、稀疏 exact 0/4;gen k=6 24:stitch=0、稀疏 exact only_decode **3/3**、学习 1/3 | `verifier-decode/mass-harness/`(`outputs/builtin_K64.json`,`gen_k6_K64.json`) |
+| §5.3 | 真实 PRM 与 7B critic 误判都集中在 on/off-path 交界(~3.5×),解释"软降权成立、硬剪枝失效" | PRM d=−1 **0.234** vs d≤−5 **0.066**(=3.53×);critic 0.078 vs 0.023(=3.43×) | `verifier-decode/prm-boundary-calibration/`(`results/prm_verdict.json`,`compare.json`) |
+| §5.4 | 负对照:有利相关 AR 集成无免费几何相关类比,coverage 天花板=基模型+token | cond−iid @K8 **−0.250**(Holm p=1.0),3.54× token | `correlated-coverage/`(`realprobe/results.json`) |
+
+> 注:§1、§3.2、§5 的实验目录(`verifier-decode/*`)已与本目录合并到同一可复现子集;路径相对 `contrib-savi/experiments/Haonan/`。早期 round-1/2 目录见上文表。
+
 ## 目录结构与复现
 
 - 四个主目录（`know-vs-decide` / `know-decide-construct` / `controllable-posterior` / `latent-consistency-decode`）各含 `VERDICT.md`（结论 + 设置 + 结果 + 成立条件）、`PREREG.md`（跑前的 hypothesis + KILL）、`core/`（最小可复现脚本）、`results.json`（结果数值源文件）。

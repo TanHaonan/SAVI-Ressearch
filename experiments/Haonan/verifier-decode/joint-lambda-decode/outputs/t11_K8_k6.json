@@ -1,0 +1,1011 @@
+{
+  "plan": "PLAN3-joint-lambda-decode",
+  "tier": "B",
+  "config": {
+    "ks": [
+      6
+    ],
+    "n": 12,
+    "K": 8,
+    "N": 8,
+    "tau": 1.0,
+    "seed": 0,
+    "n_boot": 10000,
+    "inst_seed": 7,
+    "target_range": [
+      10,
+      100
+    ],
+    "abstain": null,
+    "adapter_decoupled": "contrib-savi/experiments/Haonan/decouple-training/countdown-decode/outputs/adapter_decoupled_s0",
+    "adapter_coupled": null,
+    "with_masked_bom": true,
+    "noise_eps": 0.0,
+    "noise_mode": "sym",
+    "competence_p": null
+  },
+  "profiles": {
+    "decoupled": {
+      "6": {
+        "k": 6,
+        "depth": 5,
+        "n_instances": 12,
+        "n_headroom": 12,
+        "headroom_ids": [
+          "gen-13-000",
+          "gen-13-001",
+          "gen-13-002",
+          "gen-13-003",
+          "gen-13-004",
+          "gen-13-005",
+          "gen-13-006",
+          "gen-13-007",
+          "gen-13-008",
+          "gen-13-009",
+          "gen-13-010",
+          "gen-13-011"
+        ],
+        "pass1_all": {
+          "greedy": 0.0,
+          "self_consistency": 0.08333333333333333,
+          "savi_l0_support": 0.25,
+          "savi_l0_freq": 0.16666666666666666,
+          "savi_l1_freq": 1.0,
+          "best_of_many": 0.75,
+          "beam_no_merge_l1_freq": 1.0,
+          "masked_best_of_many": 1.0,
+          "oracle": 1.0
+        },
+        "pass1_headroom": {
+          "greedy": 0.0,
+          "self_consistency": 0.08333333333333333,
+          "savi_l0_support": 0.25,
+          "savi_l0_freq": 0.16666666666666666,
+          "savi_l1_freq": 1.0,
+          "best_of_many": 0.75,
+          "beam_no_merge_l1_freq": 1.0,
+          "masked_best_of_many": 1.0,
+          "oracle": 1.0
+        },
+        "tokens_mean": {
+          "greedy": 11.0,
+          "self_consistency": 86.33333333333333,
+          "savi_l0_support": 772.0833333333334,
+          "savi_l0_freq": 772.25,
+          "savi_l1_freq": 620.4166666666666,
+          "best_of_many": 626.3333333333334,
+          "beam_no_merge_l1_freq": 654.4166666666666,
+          "masked_best_of_many": 652.1666666666666,
+          "oracle": 0.0
+        },
+        "H1_savi_vs_best_of_many_isotoken": {
+          "delta": 0.25,
+          "lo": 0.0,
+          "hi": 0.5,
+          "n": 12
+        },
+        "H4_savi_vs_beam_no_merge": {
+          "delta": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 12
+        },
+        "T1_decomposition": {
+          "masked_minus_best_of_many": {
+            "delta": 0.25,
+            "lo": 0.0,
+            "hi": 0.5,
+            "n": 12
+          },
+          "savi_minus_masked": {
+            "delta": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n": 12
+          }
+        },
+        "keff_parsed_mean": 4.862121212121212,
+        "keff_feasible_mean": 1.9574635241301908,
+        "parse_rate": 0.9916087962962963,
+        "H5_freq_edge_ece": {
+          "ece": 0.2292771883289125,
+          "n": 754,
+          "bins": [
+            {
+              "bin": 0,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 1,
+              "n": 517,
+              "mean_p": 0.125,
+              "frac_solvable": 0.4158607350096712
+            },
+            {
+              "bin": 2,
+              "n": 138,
+              "mean_p": 0.25,
+              "frac_solvable": 0.37681159420289856
+            },
+            {
+              "bin": 3,
+              "n": 54,
+              "mean_p": 0.375,
+              "frac_solvable": 0.3888888888888889
+            },
+            {
+              "bin": 4,
+              "n": 0,
+              "mean_p": null,
+              "frac_solvable": null
+            },
+            {
+              "bin": 5,
+              "n": 14,
+              "mean_p": 0.5,
+              "frac_solvable": 0.35714285714285715
+            },
+            {
+              "bin": 6,
+              "n": 5,
+              "mean_p": 0.625,
+              "frac_solvable": 0.8
+            },
+            {
+              "bin": 7,
+              "n": 1,
+              "mean_p": 0.75,
+              "frac_solvable": 0.0
+            },
+            {
+              "bin": 8,
+              "n": 3,
+              "mean_p": 0.875,
+              "frac_solvable": 0.6666666666666666
+            },
+            {
+              "bin": 9,
+              "n": 22,
+              "mean_p": 1.0,
+              "frac_solvable": 1.0
+            }
+          ]
+        },
+        "merge_ratio": 2.2815096858359807,
+        "n_instrumented": 6,
+        "per_instance": [
+          {
+            "id": "gen-13-000",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 254
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 255
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 432,
+                "exec": 284,
+                "merge_ratio": 1.7222222222222223
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 440,
+                "exec": 200,
+                "n_rollouts": 40,
+                "token_target": 432,
+                "token_ratio": 1.0185185185185186
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 480,
+                "exec": 316
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 432,
+                "exec": 288,
+                "n_rollouts": 5
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 18,
+              "keff_parsed_mean": 5.722222222222222,
+              "keff_feasible_mean": 1.0555555555555556,
+              "keff_per_depth": [
+                7.0,
+                6.428571428571429,
+                6.0,
+                4.0,
+                1.0
+              ],
+              "parse_rate": 0.9861111111111112
+            }
+          },
+          {
+            "id": "gen-13-001",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 82,
+                "exec": 37
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 744,
+                "exec": 247
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 744,
+                "exec": 236
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 374,
+                "merge_ratio": 3.176470588235294
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 581,
+                "exec": 263,
+                "n_rollouts": 55,
+                "token_target": 576,
+                "token_ratio": 1.0086805555555556
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 720,
+                "exec": 470
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 624,
+                "exec": 416,
+                "n_rollouts": 6
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 24,
+              "keff_parsed_mean": 3.9583333333333335,
+              "keff_feasible_mean": 1.9166666666666667,
+              "keff_per_depth": [
+                6.0,
+                5.0,
+                4.625,
+                2.857142857142857,
+                1.0
+              ],
+              "parse_rate": 0.9739583333333334
+            }
+          },
+          {
+            "id": "gen-13-002",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 1,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 792,
+                "exec": 264
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 792,
+                "exec": 264
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 792,
+                "exec": 528,
+                "merge_ratio": 2.56
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 798,
+                "exec": 362,
+                "n_rollouts": 74,
+                "token_target": 792,
+                "token_ratio": 1.0075757575757576
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 792,
+                "exec": 528
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 840,
+                "exec": 560,
+                "n_rollouts": 7
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 33,
+              "keff_parsed_mean": 4.606060606060606,
+              "keff_feasible_mean": 2.8484848484848486,
+              "keff_per_depth": [
+                8.0,
+                6.5,
+                6.0,
+                4.5,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-13-003",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 792,
+                "exec": 264
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 792,
+                "exec": 264
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 720,
+                "exec": 480,
+                "merge_ratio": 1.90625
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 724,
+                "exec": 329,
+                "n_rollouts": 66,
+                "token_target": 720,
+                "token_ratio": 1.0055555555555555
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 720,
+                "exec": 480
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 770,
+                "exec": 510,
+                "n_rollouts": 8
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 30,
+              "keff_parsed_mean": 4.9,
+              "keff_feasible_mean": 2.2666666666666666,
+              "keff_per_depth": [
+                8.0,
+                6.875,
+                5.75,
+                4.125,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-13-004",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 80,
+                "exec": 36
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 251
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 248
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 380,
+                "merge_ratio": 2.4242424242424243
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 583,
+                "exec": 264,
+                "n_rollouts": 55,
+                "token_target": 576,
+                "token_ratio": 1.0121527777777777
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 380
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 624,
+                "exec": 414,
+                "n_rollouts": 6
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 24,
+              "keff_parsed_mean": 4.541666666666667,
+              "keff_feasible_mean": 1.5833333333333333,
+              "keff_per_depth": [
+                7.0,
+                5.428571428571429,
+                5.5,
+                3.75,
+                1.25
+              ],
+              "parse_rate": 0.9895833333333334
+            }
+          },
+          {
+            "id": "gen-13-005",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 792,
+                "exec": 260
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 792,
+                "exec": 262
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 648,
+                "exec": 432,
+                "merge_ratio": 1.5192307692307692
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 652,
+                "exec": 296,
+                "n_rollouts": 60,
+                "token_target": 648,
+                "token_ratio": 1.0061728395061729
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 696,
+                "exec": 464
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 648,
+                "exec": 432,
+                "n_rollouts": 6
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": {
+              "n_nodes": 27,
+              "keff_parsed_mean": 5.444444444444445,
+              "keff_feasible_mean": 2.074074074074074,
+              "keff_per_depth": [
+                8.0,
+                7.0,
+                6.25,
+                3.875,
+                1.0
+              ],
+              "parse_rate": 1.0
+            }
+          },
+          {
+            "id": "gen-13-006",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 255
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 250
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 552,
+                "exec": 366,
+                "merge_ratio": 1.8387096774193548
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 557,
+                "exec": 253,
+                "n_rollouts": 51,
+                "token_target": 552,
+                "token_ratio": 1.0090579710144927
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 576,
+                "exec": 382
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 552,
+                "exec": 368,
+                "n_rollouts": 7
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-13-007",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 1,
+                "tokens": 744,
+                "exec": 248
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 744,
+                "exec": 248
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 552,
+                "exec": 368,
+                "merge_ratio": 2.730769230769231
+              },
+              "best_of_many": {
+                "ok": 0,
+                "tokens": 561,
+                "exec": 255,
+                "n_rollouts": 51,
+                "token_target": 552,
+                "token_ratio": 1.016304347826087
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 552,
+                "exec": 368
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 552,
+                "exec": 368,
+                "n_rollouts": 7
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-13-008",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 769,
+                "exec": 254
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 769,
+                "exec": 255
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 625,
+                "exec": 414,
+                "merge_ratio": 2.3793103448275863
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 630,
+                "exec": 286,
+                "n_rollouts": 58,
+                "token_target": 625,
+                "token_ratio": 1.008
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 649,
+                "exec": 430
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 672,
+                "exec": 448,
+                "n_rollouts": 8
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-13-009",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 256
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 256
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 672,
+                "exec": 446,
+                "merge_ratio": 2.657142857142857
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 682,
+                "exec": 310,
+                "n_rollouts": 62,
+                "token_target": 672,
+                "token_ratio": 1.0148809523809523
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 696,
+                "exec": 462
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 744,
+                "exec": 496,
+                "n_rollouts": 9
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-13-010",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 82,
+                "exec": 37
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 792,
+                "exec": 262
+              },
+              "savi_l0_freq": {
+                "ok": 1,
+                "tokens": 794,
+                "exec": 263
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 650,
+                "exec": 430,
+                "merge_ratio": 2.630434782608696
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 654,
+                "exec": 297,
+                "n_rollouts": 60,
+                "token_target": 650,
+                "token_ratio": 1.0061538461538462
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 698,
+                "exec": 462
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 696,
+                "exec": 464,
+                "n_rollouts": 7
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          },
+          {
+            "id": "gen-13-011",
+            "headroom": true,
+            "arms": {
+              "greedy": {
+                "ok": 0,
+                "tokens": 11,
+                "exec": 5
+              },
+              "self_consistency": {
+                "ok": 0,
+                "tokens": 88,
+                "exec": 40
+              },
+              "savi_l0_support": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 254
+              },
+              "savi_l0_freq": {
+                "ok": 0,
+                "tokens": 768,
+                "exec": 253
+              },
+              "savi_l1_freq": {
+                "ok": 1,
+                "tokens": 650,
+                "exec": 422,
+                "merge_ratio": 1.8333333333333333
+              },
+              "best_of_many": {
+                "ok": 1,
+                "tokens": 654,
+                "exec": 297,
+                "n_rollouts": 60,
+                "token_target": 650,
+                "token_ratio": 1.0061538461538462
+              },
+              "beam_no_merge_l1_freq": {
+                "ok": 1,
+                "tokens": 698,
+                "exec": 454
+              },
+              "masked_best_of_many": {
+                "ok": 1,
+                "tokens": 672,
+                "exec": 448,
+                "n_rollouts": 7
+              },
+              "oracle": {
+                "ok": 1,
+                "tokens": 0,
+                "exec": 1
+              }
+            },
+            "keff": null
+          }
+        ]
+      }
+    }
+  },
+  "synthesis": {
+    "ks": [
+      6
+    ],
+    "H1_deepest": {
+      "delta": 0.25,
+      "lo": 0.0,
+      "hi": 0.5,
+      "n": 12
+    },
+    "H2_depth_curve": {
+      "deltas_by_k": {
+        "6": 0.25
+      },
+      "ci_by_k": {
+        "6": [
+          0.0,
+          0.5
+        ]
+      },
+      "strictly_increasing": true,
+      "shallow_k": 6,
+      "shallow_delta_le_0": false,
+      "deepest_k": 6,
+      "deepest_delta_gt_0_ci_excl_0": false
+    },
+    "H3_keff": {
+      "keff_decoupled_by_k": {
+        "6": 4.862121212121212
+      }
+    },
+    "H4_by_k": {
+      "6": {
+        "delta": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 12
+      }
+    },
+    "H5_ece_by_k": {
+      "6": 0.2292771883289125
+    },
+    "gates": {
+      "V1_headroom_nonempty": true,
+      "V3_oracle_gt_best_of_many_isotoken": true,
+      "Phi_works_merge_ratio_gt1": true
+    },
+    "holm_family": {
+      "H1_deepest_reject": false,
+      "H4_deepest_reject": false
+    }
+  },
+  "log": [
+    "[15:50:23] PLAN3 run_joint tier=B ks=[6] n=12 K=8 N=8 tau=1.0 seed=0",
+    "[15:50:23] Tier B: loading decoupled adapter contrib-savi/experiments/Haonan/decouple-training/countdown-decode/outputs/adapter_decoupled_s0 on cuda",
+    "[15:50:42] sharding: running only profile=decoupled",
+    "[15:50:42] === profile: decoupled ===",
+    "[15:55:31]     [decoupled] k=6 1/12 savi_l1=1 bom=0 (savi_tok=432 bom_tok=440 r=40) 289s memo=15344",
+    "[16:01:09]     [decoupled] k=6 2/12 savi_l1=1 bom=1 (savi_tok=576 bom_tok=581 r=55) 627s memo=23775",
+    "[16:07:51]     [decoupled] k=6 3/12 savi_l1=1 bom=1 (savi_tok=792 bom_tok=798 r=74) 1028s memo=30433",
+    "[16:14:08]     [decoupled] k=6 4/12 savi_l1=1 bom=1 (savi_tok=720 bom_tok=724 r=66) 1406s memo=39391",
+    "[16:19:59]     [decoupled] k=6 5/12 savi_l1=1 bom=1 (savi_tok=576 bom_tok=583 r=55) 1756s memo=48869",
+    "[16:26:08]     [decoupled] k=6 6/12 savi_l1=1 bom=1 (savi_tok=648 bom_tok=652 r=60) 2126s memo=64247",
+    "[16:32:02]     [decoupled] k=6 7/12 savi_l1=1 bom=0 (savi_tok=552 bom_tok=557 r=51) 2479s memo=81839",
+    "[16:37:28]     [decoupled] k=6 8/12 savi_l1=1 bom=0 (savi_tok=552 bom_tok=561 r=51) 2806s memo=98243",
+    "[16:43:31]     [decoupled] k=6 9/12 savi_l1=1 bom=1 (savi_tok=625 bom_tok=630 r=58) 3169s memo=112011",
+    "[16:49:45]     [decoupled] k=6 10/12 savi_l1=1 bom=1 (savi_tok=672 bom_tok=682 r=62) 3543s memo=129151",
+    "[16:55:19]     [decoupled] k=6 11/12 savi_l1=1 bom=1 (savi_tok=650 bom_tok=654 r=60) 3876s memo=134695",
+    "[17:01:11]     [decoupled] k=6 12/12 savi_l1=1 bom=1 (savi_tok=650 bom_tok=654 r=60) 4229s memo=141325",
+    "[17:01:12]   k=6: savi_l1=1.000 best_of_many=0.750 H1=+0.250[+0.000,+0.500] Keff=4.86 merge=2.3 ECE=0.229",
+    "[17:01:12]   decoupled memo final: {'size': 141325, 'hits': 273872, 'misses': 141325}"
+  ]
+}

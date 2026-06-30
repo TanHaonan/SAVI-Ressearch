@@ -1,0 +1,1462 @@
+{
+  "config": {
+    "adapter": "contrib-savi/experiments/Haonan/decouple-training/countdown-decode/outputs/adapter_decoupled_s0",
+    "tau": 0.7,
+    "seed": 0,
+    "K_grid": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      16
+    ],
+    "K_ref": 8,
+    "v1_band": [
+      0.2,
+      0.9
+    ],
+    "gen_k_depths": [
+      5,
+      6
+    ],
+    "n_per_depth": 56,
+    "target_range": [
+      10,
+      60
+    ]
+  },
+  "n_generated": 78,
+  "n_selected": 8,
+  "audit": [
+    {
+      "id": "gen-0-000",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-001",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-002",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-003",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-004",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-005",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-006",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-007",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-008",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-009",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-010",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-011",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-012",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-013",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-014",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-015",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-016",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.375,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-017",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-018",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-019",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-020",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-021",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-022",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-023",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-024",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-025",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-026",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-027",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-028",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-029",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-030",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-031",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-032",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-033",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-034",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-035",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-036",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-037",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-038",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-039",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-040",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-041",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-042",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-043",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-044",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-045",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-046",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-047",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-048",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-049",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-050",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-051",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-052",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-053",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-054",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-055",
+      "k": 5,
+      "witness_depth": 4,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-000",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-001",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true
+    },
+    {
+      "id": "gen-0-002",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-003",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-004",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-005",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-006",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-007",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-008",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-009",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-010",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-011",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-012",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-013",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-014",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-015",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-016",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-017",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.125,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-018",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-019",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-020",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    },
+    {
+      "id": "gen-0-021",
+      "k": 6,
+      "witness_depth": 5,
+      "coverage_ref_frac": 0.0,
+      "v1_in_band": false
+    }
+  ],
+  "instances": [
+    {
+      "id": "gen-0-000",
+      "numbers": [
+        7,
+        13,
+        7,
+        1,
+        5
+      ],
+      "target": 42,
+      "witness_depth": 4,
+      "k": 5,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": false,
+        "4": false,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        "gen_per_chain": [
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          33
+        ],
+        "prefill_per_chain": [
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          887,
+          884
+        ],
+        "moves": [
+          "5 * 7;1 + 13;7 * 14;35 - 98",
+          "1 + 13;7 / 7;1 + 14;5 * 15",
+          "7 * 7;1 + 5;6 * 13;49 - 78",
+          "1 - 7;6 + 13;7 + 19;5 + 26",
+          "5 * 7;1 + 35;7 - 36;13 + 29",
+          "7 * 7;1 - 13;12 - 49;5 + 37",
+          "7 * 7;1 - 5;4 * 13;49 - 52",
+          "7 - 13;5 - 7;1 + 6;2 * 7",
+          "7 * 7;1 - 13;12 - 49;5 + 37",
+          "7 / 7;1 + 1;2 * 13;5 + 26",
+          "1 + 7;7 - 13;5 - 8;3 * 6",
+          "1 + 5;7 - 13;6 * 6;7 + 36",
+          "5 + 7;1 - 12;7 - 11;4 * 13",
+          "7 * 7;1 + 13;5 - 14;9 - 49",
+          "1 - 13;5 - 7;2 - 12;7 * 10",
+          "5 - 13;7 * 7;8 - 49;1 + 41"
+        ],
+        "coverage_by_K": {
+          "2": false,
+          "4": false,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 558,
+        "prefill_tokens_total": 14189,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 42.3
+    },
+    {
+      "id": "gen-0-002",
+      "numbers": [
+        10,
+        4,
+        9,
+        3,
+        5
+      ],
+      "target": 18,
+      "witness_depth": 4,
+      "k": 5,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": false,
+        "4": true,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "gen_per_chain": [
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          38
+        ],
+        "prefill_per_chain": [
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          886,
+          883
+        ],
+        "moves": [
+          "3 * 4;5 - 12;7 + 10;9 + 17",
+          "4 + 9;3 - 10;5 + 7;12 + 13",
+          "4 - 9;3 * 5;5 - 15;10 + 10",
+          "5 - 9;3 * 4;4 - 12;8 + 10",
+          "3 - 9;5 + 10;6 - 15;4 * 9",
+          "5 - 10;3 * 5;4 - 15;9 + 11",
+          "3 - 10;4 * 5;7 - 9;2 - 20",
+          "4 - 10;3 - 9;6 * 6;5 - 36",
+          "3 - 4;5 + 9;1 + 10;11 + 14",
+          "4 - 9;3 + 5;5 - 10;5 + 8",
+          "3 - 5;4 - 10;2 * 9;6 * 18",
+          "5 - 10;5 - 9;3 * 4;4 + 12",
+          "3 - 9;4 + 10;5 - 14;6 * 9",
+          "3 * 4;9 - 10;5 + 12;1 + 17",
+          "4 - 9;3 + 5;5 - 10;5 + 8",
+          "5 - 9;4 - 10;3 * 6;4 * 18"
+        ],
+        "coverage_by_K": {
+          "2": false,
+          "4": true,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 548,
+        "prefill_tokens_total": 14173,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 41.1
+    },
+    {
+      "id": "gen-0-009",
+      "numbers": [
+        7,
+        12,
+        13,
+        11,
+        11
+      ],
+      "target": 10,
+      "witness_depth": 4,
+      "k": 5,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": true,
+        "4": true,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "gen_per_chain": [
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          34
+        ],
+        "prefill_per_chain": [
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          892,
+          884
+        ],
+        "moves": [
+          "11 - 12;1 + 13;7 - 11;4 - 14",
+          "7 - 13;6 - 11;11 - 12;1 * 5",
+          "11 + 11;12 - 22;7 - 10;3 - 13",
+          "7 - 13;11 / 11;1 - 6;5 - 12",
+          "11 - 12;1 + 7;8 - 13;5 - 11",
+          "11 / 11;1 + 13;7 - 12;5 - 14",
+          "11 + 11;7 * 13;22 - 91;12 - 69",
+          "7 - 12;11 + 11;5 - 13;8 - 22",
+          "11 + 13;11 - 24;7 - 12;5 - 13",
+          "7 + 11;13 - 18;5 - 12;7 - 11",
+          "7 + 13;11 - 12;11 - 20;1 + 9",
+          "11 + 13;7 - 12;5 - 11;6 - 24",
+          "7 - 12;5 - 13;11 - 11;0 + 8",
+          "7 - 12;11 - 13;5 - 11;2 + 6",
+          "11 - 12;7 - 11;1 - 4;3 - 13",
+          "11 - 12;1 - 7;6 - 11;5 - 13"
+        ],
+        "coverage_by_K": {
+          "2": true,
+          "4": true,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 589,
+        "prefill_tokens_total": 14264,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 43.7
+    },
+    {
+      "id": "gen-0-016",
+      "numbers": [
+        5,
+        8,
+        2,
+        10,
+        13
+      ],
+      "target": 34,
+      "witness_depth": 4,
+      "k": 5,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": false,
+        "4": true,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.375,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "gen_per_chain": [
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          36
+        ],
+        "prefill_per_chain": [
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890,
+          890
+        ],
+        "moves": [
+          "8 - 10;2 * 5;2 * 10;13 + 20",
+          "8 - 13;2 * 10;5 + 20;5 + 25",
+          "2 * 13;5 + 10;8 + 15;23 + 26",
+          "2 - 13;8 + 10;5 + 18;11 + 23",
+          "5 + 8;2 - 13;10 + 13;11 + 23",
+          "2 - 13;8 + 10;5 + 11;16 + 18",
+          "2 - 13;8 - 11;5 * 10;3 - 50",
+          "2 * 10;5 - 13;8 + 20;8 + 28",
+          "5 + 10;2 * 8;13 + 15;16 + 28",
+          "2 * 8;5 * 10;13 - 50;16 - 37",
+          "2 + 13;5 - 15;10 * 10;8 - 100",
+          "2 + 10;8 - 13;5 + 5;10 + 12",
+          "2 - 13;8 - 11;3 * 10;5 + 30",
+          "2 * 5;8 - 13;5 * 10;10 - 50",
+          "2 / 5;5/2 + 13;10 + 31/2;8 * 51/2",
+          "8 + 10;2 * 13;5 + 18;23 + 26"
+        ],
+        "coverage_by_K": {
+          "2": false,
+          "4": true,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 591,
+        "prefill_tokens_total": 14240,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 43.0
+    },
+    {
+      "id": "gen-0-030",
+      "numbers": [
+        2,
+        11,
+        4,
+        10,
+        10
+      ],
+      "target": 17,
+      "witness_depth": 4,
+      "k": 5,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": true,
+        "4": true,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "gen_per_chain": [
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          34
+        ],
+        "prefill_per_chain": [
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          886
+        ],
+        "moves": [
+          "4 + 11;10 - 15;2 + 10;5 + 12",
+          "4 - 10;2 - 11;9 + 10;6 - 19",
+          "2 / 10;4 + 11;5 + 15;10 - 20",
+          "2 * 11;10 + 22;4 - 32;10 - 28",
+          "2 * 11;10 - 22;4 - 10;6 + 12",
+          "10 - 11;1 * 2;2 + 10;4 + 12",
+          "2 / 10;5 - 11;6 + 10;4 + 16",
+          "4 - 11;2 * 10;7 - 10;3 - 20",
+          "4 * 10;10 - 11;1 + 2;3 - 40",
+          "2 - 10;8 - 10;2 - 4;2 + 11",
+          "2 - 11;9 + 10;4 - 19;10 + 15",
+          "4 * 10;2 * 11;10 - 40;22 - 30",
+          "2 + 4;10 + 10;6 + 20;11 - 26",
+          "2 - 11;9 - 10;1 + 4;5 + 10",
+          "10 + 11;2 / 21;4 - 21/2;13/2 * 10",
+          "2 - 4;2 - 11;9 + 10;10 - 19"
+        ],
+        "coverage_by_K": {
+          "2": true,
+          "4": true,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 589,
+        "prefill_tokens_total": 14251,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 42.7
+    },
+    {
+      "id": "gen-0-033",
+      "numbers": [
+        4,
+        12,
+        13,
+        1,
+        11
+      ],
+      "target": 11,
+      "witness_depth": 4,
+      "k": 5,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": true,
+        "4": true,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "gen_per_chain": [
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          27
+        ],
+        "prefill_per_chain": [
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          905,
+          677
+        ],
+        "moves": [
+          "1 + 12;13 / 13;1 * 4;4 * 11",
+          "1 - 4;11 - 12;1 - 3;2 - 13",
+          "1 + 11;4 - 13;12 - 12;0 + 9",
+          "1 - 12;4 - 11;7 - 13;6 - 11",
+          "4 - 11;1 + 12;7 - 13;6 - 13",
+          "1 - 4;11 - 12;1 + 13;3 - 14",
+          "1 - 12;4 - 13;11 / 11;1 + 9",
+          "4 + 13;1 + 12;11 - 13;2 - 17",
+          "1 + 12;13 / 13;1 * 4;4 * 11",
+          "1 + 12;4 * 13;13 - 52;11 - 39",
+          "1 - 12;11 / 11;1 - 13;4 - 12",
+          "1 + 4;5 * 12;11 - 60;13 - 49",
+          "1 + 11;4 * 13;12 - 52;12 - 40",
+          "1 * 4;11 - 12;1 + 13;4 - 14",
+          "1 - 12;11 - 13;2 * 11;4 / 22",
+          "1 + 13;12 - 14;2 * 4"
+        ],
+        "coverage_by_K": {
+          "2": true,
+          "4": true,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 582,
+        "prefill_tokens_total": 14252,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 42.0
+    },
+    {
+      "id": "gen-0-052",
+      "numbers": [
+        7,
+        13,
+        11,
+        12,
+        1
+      ],
+      "target": 20,
+      "witness_depth": 4,
+      "k": 5,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": false,
+        "4": false,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "gen_per_chain": [
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37,
+          37
+        ],
+        "prefill_per_chain": [
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          891,
+          893
+        ],
+        "moves": [
+          "1 - 12;11 + 13;7 * 24;11 - 168",
+          "1 + 13;11 - 12;1 + 14;7 + 15",
+          "1 - 12;11 + 11;7 - 13;6 - 22",
+          "1 - 7;11 + 12;6 + 13;19 - 23",
+          "7 - 11;1 - 13;4 - 12;8 + 12",
+          "1 - 7;11 - 13;2 + 12;6 + 14",
+          "1 + 12;7 - 11;4 + 13;13 + 17",
+          "1 - 13;7 + 11;12 - 18;6 + 12",
+          "7 - 11;1 - 12;11 + 13;4 - 24",
+          "1 + 12;13 + 13;11 + 26;7 - 37",
+          "1 - 7;6 - 13;7 - 12;5 + 11",
+          "7 - 11;1 - 12;11 + 13;4 - 24",
+          "1 + 12;7 + 13;11 - 13;2 * 20",
+          "1 + 12;11 - 13;2 + 13;7 + 15",
+          "7 + 13;1 - 11;10 - 12;2 * 20",
+          "1 - 13;12 + 12;7 + 11;18 - 24"
+        ],
+        "coverage_by_K": {
+          "2": false,
+          "4": false,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 592,
+        "prefill_tokens_total": 14258,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 46.4
+    },
+    {
+      "id": "gen-0-001",
+      "numbers": [
+        7,
+        13,
+        5,
+        8,
+        6,
+        10
+      ],
+      "target": 23,
+      "witness_depth": 5,
+      "k": 6,
+      "oracle_solvable": true,
+      "coverage_by_K": {
+        "2": true,
+        "4": true,
+        "6": true,
+        "8": true,
+        "12": true,
+        "16": true
+      },
+      "coverage_ref_frac": 0.25,
+      "v1_in_band": true,
+      "pool": {
+        "reached": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "gen_per_chain": [
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          52
+        ],
+        "prefill_per_chain": [
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1118,
+          1123
+        ],
+        "moves": [
+          "5 - 13;7 + 8;8 - 15;6 + 10;7 + 16",
+          "5 + 8;6 - 13;7 - 13;6 + 10;7 + 16",
+          "5 - 8;7 - 10;3 - 6;3 + 13;3 + 16",
+          "5 * 7;6 - 35;10 - 29;8 - 19;11 + 13",
+          "7 - 13;6 - 8;5 * 6;2 - 30;10 - 28",
+          "5 - 13;7 - 10;6 - 8;2 * 8;3 + 16",
+          "6 + 13;5 - 19;7 - 14;7 + 8;10 + 15",
+          "7 * 8;6 - 13;5 - 56;10 + 51;7 - 61",
+          "5 - 13;8 - 10;2 * 6;7 + 12;8 + 19",
+          "6 - 7;5 * 10;1 + 50;13 - 51;8 - 38",
+          "6 - 13;5 * 7;8 - 35;10 - 27;7 + 17",
+          "5 - 10;7 - 8;5 * 6;1 - 13;12 - 30",
+          "6 + 7;5 + 10;13 + 13;8 * 15;26 - 120",
+          "5 - 13;8 - 10;2 * 6;7 + 12;8 + 19",
+          "7 * 8;6 - 10;5 - 13;4 - 56;8 - 52",
+          "5 + 13;7 - 18;6 + 8;10 - 11;1 + 14"
+        ],
+        "coverage_by_K": {
+          "2": true,
+          "4": true,
+          "6": true,
+          "8": true,
+          "12": true,
+          "16": true
+        },
+        "gen_tokens_total": 712,
+        "prefill_tokens_total": 17893,
+        "cands_per_fwd_all_one": true
+      },
+      "secs": 54.0
+    }
+  ]
+}

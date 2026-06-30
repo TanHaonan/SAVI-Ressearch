@@ -1,0 +1,698 @@
+{
+  "plan": "PLAN4-T1.4-learned-value-softlambda",
+  "adapter": "contrib-savi/experiments/Haonan/decouple-training/countdown-decode/outputs/adapter_decoupled_s0",
+  "value_metrics": {
+    "acc": 0.9141111111111111,
+    "auc": 0.9696355033356223,
+    "ece": 0.007573948020953083,
+    "fn_rate": 0.18077803203661327,
+    "fp_rate": 0.04687989965506428,
+    "base_rate_solvable": 0.29133333333333333,
+    "n": 9000
+  },
+  "config": {
+    "ks": [
+      6
+    ],
+    "n": 12,
+    "K": 8,
+    "N": 8,
+    "tau": 1.0,
+    "lams": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "ref_lam": 2.0,
+    "hard_thresh": 0.5
+  },
+  "by_k": {
+    "6": {
+      "k": 6,
+      "depth": 5,
+      "n": 12,
+      "n_headroom": 12,
+      "pass1_hr": {
+        "savi_exact": 1.0,
+        "savi_l0_freq": 0.16666666666666666,
+        "savi_value_soft_lam0.0": 0.16666666666666666,
+        "savi_value_soft_lam0.5": 0.25,
+        "savi_value_soft_lam1.0": 0.25,
+        "savi_value_soft_lam2.0": 0.25,
+        "savi_value_soft_lam4.0": 0.25,
+        "savi_value_soft_lam8.0": 0.25,
+        "savi_value_hard": 0.0,
+        "best_of_many": 0.8333333333333334
+      },
+      "tokens_mean": {
+        "savi_exact": 620.4166666666666,
+        "savi_l0_freq": 772.25,
+        "savi_value_soft_lam0.0": 772.25,
+        "savi_value_soft_lam0.5": 772.25,
+        "savi_value_soft_lam1.0": 772.0833333333334,
+        "savi_value_soft_lam2.0": 772.0833333333334,
+        "savi_value_soft_lam4.0": 772.0833333333334,
+        "savi_value_soft_lam8.0": 772.0833333333334,
+        "savi_value_hard": 370.0833333333333,
+        "best_of_many": 776.9166666666666
+      },
+      "H1_vs_best_of_many": {
+        "savi_exact": {
+          "delta": 0.16666666666666666,
+          "lo": 0.0,
+          "hi": 0.4166666666666667,
+          "n": 12
+        },
+        "savi_l0_freq": {
+          "delta": -0.6666666666666666,
+          "lo": -0.9166666666666666,
+          "hi": -0.4166666666666667,
+          "n": 12
+        },
+        "savi_value_soft_lam0.0": {
+          "delta": -0.6666666666666666,
+          "lo": -0.9166666666666666,
+          "hi": -0.4166666666666667,
+          "n": 12
+        },
+        "savi_value_soft_lam0.5": {
+          "delta": -0.5833333333333334,
+          "lo": -0.8333333333333334,
+          "hi": -0.3333333333333333,
+          "n": 12
+        },
+        "savi_value_soft_lam1.0": {
+          "delta": -0.5833333333333334,
+          "lo": -0.8333333333333334,
+          "hi": -0.3333333333333333,
+          "n": 12
+        },
+        "savi_value_soft_lam2.0": {
+          "delta": -0.5833333333333334,
+          "lo": -0.8333333333333334,
+          "hi": -0.3333333333333333,
+          "n": 12
+        },
+        "savi_value_soft_lam4.0": {
+          "delta": -0.5833333333333334,
+          "lo": -0.9166666666666666,
+          "hi": -0.16666666666666666,
+          "n": 12
+        },
+        "savi_value_soft_lam8.0": {
+          "delta": -0.5833333333333334,
+          "lo": -0.9166666666666666,
+          "hi": -0.16666666666666666,
+          "n": 12
+        },
+        "savi_value_hard": {
+          "delta": -0.8333333333333334,
+          "lo": -1.0,
+          "hi": -0.5833333333333334,
+          "n": 12
+        },
+        "best_of_many": {
+          "delta": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 12
+        }
+      },
+      "per_instance": [
+        {
+          "id": "gen-13-000",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 432
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 192
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 770
+            }
+          }
+        },
+        {
+          "id": "gen-13-001",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 576
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 1,
+              "tokens": 744
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 1,
+              "tokens": 744
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 1,
+              "tokens": 744
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 1,
+              "tokens": 744
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 1,
+              "tokens": 744
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 384
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 753
+            }
+          }
+        },
+        {
+          "id": "gen-13-002",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 792
+            },
+            "savi_l0_freq": {
+              "ok": 1,
+              "tokens": 792
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 1,
+              "tokens": 792
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 1,
+              "tokens": 792
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 1,
+              "tokens": 792
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 1,
+              "tokens": 792
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 408
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 798
+            }
+          }
+        },
+        {
+          "id": "gen-13-003",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 720
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 408
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 801
+            }
+          }
+        },
+        {
+          "id": "gen-13-004",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 576
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 384
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 770
+            }
+          }
+        },
+        {
+          "id": "gen-13-005",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 648
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 408
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 795
+            }
+          }
+        },
+        {
+          "id": "gen-13-006",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 552
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 1,
+              "tokens": 768
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 1,
+              "tokens": 768
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 384
+            },
+            "best_of_many": {
+              "ok": 0,
+              "tokens": 775
+            }
+          }
+        },
+        {
+          "id": "gen-13-007",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 552
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 744
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 312
+            },
+            "best_of_many": {
+              "ok": 0,
+              "tokens": 748
+            }
+          }
+        },
+        {
+          "id": "gen-13-008",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 625
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 769
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 769
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 769
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 769
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 1,
+              "tokens": 769
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 1,
+              "tokens": 769
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 1,
+              "tokens": 769
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 385
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 771
+            }
+          }
+        },
+        {
+          "id": "gen-13-009",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 672
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 384
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 770
+            }
+          }
+        },
+        {
+          "id": "gen-13-010",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 650
+            },
+            "savi_l0_freq": {
+              "ok": 1,
+              "tokens": 794
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 1,
+              "tokens": 794
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 1,
+              "tokens": 794
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 1,
+              "tokens": 792
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 792
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 408
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 797
+            }
+          }
+        },
+        {
+          "id": "gen-13-011",
+          "headroom": true,
+          "arms": {
+            "savi_exact": {
+              "ok": 1,
+              "tokens": 650
+            },
+            "savi_l0_freq": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam0.5": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam1.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam2.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam4.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_soft_lam8.0": {
+              "ok": 0,
+              "tokens": 768
+            },
+            "savi_value_hard": {
+              "ok": 0,
+              "tokens": 384
+            },
+            "best_of_many": {
+              "ok": 1,
+              "tokens": 775
+            }
+          }
+        }
+      ]
+    }
+  },
+  "log": [
+    "[18:03:33] loading cached value model outputs/value_model.pkl",
+    "[18:03:33] loading contrib-savi/experiments/Haonan/decouple-training/countdown-decode/outputs/adapter_decoupled_s0",
+    "[18:03:45] loaded",
+    "[18:11:24]   k=6 1/12 exact=1 soft@2.0=0 hard=0 bom=1 (458s)",
+    "[18:19:01]   k=6 2/12 exact=1 soft@2.0=1 hard=0 bom=1 (916s)",
+    "[18:26:38]   k=6 3/12 exact=1 soft@2.0=1 hard=0 bom=1 (1372s)",
+    "[18:34:18]   k=6 4/12 exact=1 soft@2.0=0 hard=0 bom=1 (1833s)",
+    "[18:42:17]   k=6 5/12 exact=1 soft@2.0=0 hard=0 bom=1 (2311s)",
+    "[18:49:59]   k=6 6/12 exact=1 soft@2.0=0 hard=0 bom=1 (2774s)",
+    "[18:57:46]   k=6 7/12 exact=1 soft@2.0=0 hard=0 bom=0 (3240s)",
+    "[19:05:19]   k=6 8/12 exact=1 soft@2.0=0 hard=0 bom=0 (3694s)",
+    "[19:13:05]   k=6 9/12 exact=1 soft@2.0=1 hard=0 bom=1 (4160s)",
+    "[19:20:32]   k=6 10/12 exact=1 soft@2.0=0 hard=0 bom=1 (4606s)",
+    "[19:27:59]   k=6 11/12 exact=1 soft@2.0=0 hard=0 bom=1 (5053s)",
+    "[19:35:41]   k=6 12/12 exact=1 soft@2.0=0 hard=0 bom=1 (5515s)",
+    "[19:35:42] k=6: savi_exact=1.00 savi_l0_freq=0.17 svlam0.0=0.17 svlam0.5=0.25 svlam1.0=0.25 svlam2.0=0.25 svlam4.0=0.25 svlam8.0=0.25 savi_value_hard=0.00 best_of_many=0.83"
+  ]
+}
